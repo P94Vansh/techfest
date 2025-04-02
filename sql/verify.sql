@@ -1,0 +1,1 @@
+UPDATE Transactions SET Verified = TRUE WHERE Transaction_ID = 'your_transaction_id';

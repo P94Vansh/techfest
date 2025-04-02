@@ -1,0 +1,9 @@
+
+
+.event-card img{
+  transform: scale(1);
+  transition: 400ms ease-out;
+}
+.event-card:hover img{
+  transform: scale(1.1);
+}
