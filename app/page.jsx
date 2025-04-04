@@ -94,7 +94,7 @@ export default function Home() {
     },
     {
       title: "Ignition War",
-      src: "/Rocket Flying.png",
+      src: "/Rocket FLying.png",
       href: "/event/ignitionwar",
     },
     { title: "Vihangam", src: "Drone flying.png", href: "/event/vihangam" },
@@ -377,7 +377,7 @@ export default function Home() {
         <div className="flex justify-center items-center">
           <div className="bg-gray-50 border border-gray-300 rounded-lg shadow-md m-5 p-5 w-[40vw] ml-12 mb-12">
             <Image
-              src="/event1.jpg"
+              src="/event1.JPG"
               alt="Event"
               width={300}
               height={300}
