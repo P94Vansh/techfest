@@ -94,7 +94,7 @@ export default function Home() {
     },
     {
       title: "Ignition War",
-      src: "Rocket Flying.png",
+      src: "/Rocket Flying.png",
       href: "/event/ignitionwar",
     },
     { title: "Vihangam", src: "Drone flying.png", href: "/event/vihangam" },
@@ -386,10 +386,10 @@ export default function Home() {
           </div>
         </div>
         <div className="flex justify-center items-center">
-            <ImageBox src="/event2.jpg"/>
-            <ImageBox src="/event3.jpg"/>
-            <ImageBox src="/event4.jpg"/>
-            <ImageBox src="/event5.jpg"/>
+            <ImageBox src="/event2.JPG"/>
+            <ImageBox src="/event3.JPG"/>
+            <ImageBox src="/event4.JPG"/>
+            <ImageBox src="/event5.JPG"/>
 
           </div>
       </div>
