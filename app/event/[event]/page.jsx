@@ -1,36 +1,44 @@
 "use client";
 import Eventspage from "../../components/eventspage.jsx";
 import { useEffect, useRef, useState } from "react";
-import {use} from "react";
+import { use } from "react";
 export default function Page({ params }) {
-  const unwrappedParams = use(params); 
+  const unwrappedParams = use(params);
   const eventId = unwrappedParams.event;
   let i = useRef();
   const [index, setindex] = useState(0);
   const slug = [
-    "codestorm",
+    //game
     "vijayghosh",
-    "infographica",
+    //cse
     "codestorm",
-    "vijayghosh",
-    "nalneel",
-    "prathirupandristikon",
-    "ignitionwar",
-    "vihangam",
-    "vimaanshershtha",
-    "mechwar",
+    "simuhire",
     "pixelpulse",
     "Srijansamvaad",
-    "Mechnova",
+    "infographica",
+    "vidhyavrith",
+    //mech
+    "enginova",
     "Yantrasangam",
     "Kalamanthan",
     "Cadventure",
-    "Amritdhara",
+    //civil
+    "nalneel",
     "Recivilize",
-
+    "Amritdhara",
+    //aero
+    "vimaanshershtha",
+    "ignitionwar",
+    "vihangam",
+    "dronovation",
+    "nanosatpratyogita",
+    //ece
+    "mechwar",
+    //phy
+    "prathirupandristikon",
   ];
   useEffect(() => {
-    for (let index = 0; index < 18; index++) {
+    for (let index = 0; index < 21; index++) {
       const element = slug[index];
       if (element == eventId) {
         i.current = index;
@@ -44,146 +52,175 @@ export default function Page({ params }) {
   }, []);
 
   const descriptions = [
-    `Unleash your creativity and transform faces into masterpieces! 'Canvas on Face' is a vibrant face art competition where talented artists showcase their skills and imagination. Using Faces as their canvas, participants will create stunning designs, patterns, and characters Witness the artistry and skill as our contestants bring their visions to life. Join us for a colorful and inspiring event that will leave you amazed by the possibilities of face art.
-Who will be crowned the ultimate 'Canvas on Face' champion?
+    `Vijay Ghosh is an intense online battle royale gaming tournament where warriors from different departments compete to claim victory. Players must strategize, survive, and eliminate their opponents while adapting to ever-changing conditions on the battlefield.
     `,
-    `Gear up for the ultimate battle of skill and strategy! 'BGMI Badshah' is an electrifying eSports tournament where top teams clash in the popular game Battlegrounds Mobile India. Witness the best of the best compete for glory and a coveted prize pool. With lightning-fast reflexes, clever tactics, and a hint of luck, only one team will reign supreme. Join us for an action-packed day of gaming, excitement, and crowning the true 'Badshah' of BGMI.`,
-    `The Robo Race is a thrilling event where autonomous, AI-driven vehicles race on a challenging track. Teams develop unique algorithms to optimize speed, precision, and obstacle detection. This competition emphasizes innovation, technical skills, and teamwork, offering an exciting experience for tech enthusiasts and racing fans alike.
+    //cse
+    `Hackathons are essentially "marathons for hackers," combining the spirit of creative problem-solving with the endurance of a marathon. Hackathons bring together individuals with diverse skills, including web developers, programmers, designers, project managers, and others.`,
+    `The Mock Interview event is designed to provide students with a real-world interview experience. Participants will undergo technical and HR interview rounds conducted by industry professionals and experienced seniors.
     `,
-    `Unleash your hidden talent! 'Engineer Got Talent' is a showcase of skills beyond the blueprint. Join us as engineers take center stage to demonstrate their unique abilities, from singing and dancing to playing instruments or telling jokes. This entertaining event celebrates the diverse talents of engineers, proving they're more than just problem-solvers. Come witness the creativity, humor, and artistry of these talented individuals and vote for your favorite performer. Who will be crowned the ultimate 'Engineer Got Talent' champion?
+    `pixelpulse is a tech-focused poster competition where participants showcase innovative ideas, trends, or futuristic technologies through creative digital designs.
     `,
-    `Empower women, empower society! Join our website making competition,
-    where participants design and develop innovative websites focused on woman safety. Using coding skills and creativity, teams will create platforms that provide resources, support, and awareness about women's safety and empowerment. A panel of experts will judge the websites based on functionality, design, and impact.
+    `Tech Fest is a platform where students can showcase their knowledge and creativity in technology and innovation. It consists of two categories: Tech Talk, where participants deliver speeches on trending technology topics, and Innovative India PPT, where participants present innovative ideas for India's development through PowerPoint presentations. 
     `,
-    `Set sail for the ultimate robotic boat racing experience! 'Pirates' is a thrilling competition where teams design, build, and navigate their own autonomous boats through a challenging aquatic course. Witness cutting-edge technology and innovative designs as participants battle for speed, agility, and treasure. Join us for a day of high-stakes racing. pirate-themed fun, and exploration of the latest advancements in robotics and artificial intelligence.
+    `Infographica is a data visualization competition where participants transform raw data into insightful, clear, and visually appealing representations. Using Python in Jupyter Notebook, competitors must analyse a provided dataset and create compelling visualizations within a limited timeframe.
     `,
-    `UU Picasso is a dynamic painting event where participants are challenged to depict the beauty and character of the college campus through their artwork. From the historic buildings to the lush green spaces, students are encouraged to capture the campus's unique spirit and vibrancy. This event offers an opportunity for artists of all levels to showcase their skills, turning the familiar scenes of daily college life into stunning visual expressions. UU Picasso is not just a painting competition but a celebration of creativity, community, and the shared experience of campus life.
+    `VIDHYA VRITH is a high-energy technical quiz competition testing participants’ knowledge across multiple tech domains.
     `,
-    `Get ready for "Engineer's Stride," a light-hearted fun run filled with entertaining challenges! This event isn't about intense workouts—it's about enjoying activities like balloon popping, lemon races, and more that bring out your playful side. Test your agility, balance, and a bit of luck while sharing laughs with fellow engineers. Lace up and join us for a fun-filled day of light challenges and memorable moments!`,
-    `Step into a time capsule at our Fashion Show, where the vibrant styles of the retro meet contemporary Indo-Western flair. This event is a celebration of nostalgia and innovation, blending classic retro trends with modern design elements. Expect a runway filled with bold prints, vintage silhouettes, and fusion ensembles that capture the essence of two iconic fashion worlds. Join us for an evening of style, creativity, and timeless elegance`,
-    `Get ready to put your knowledge to the test! ‘Head Scratcher’ is a thrilling quiz competition that will push your limits and challenge your intellect. Teams will face off in a battle of wits, tackling tough questions and brain-teasing puzzles. From science and history to pop culture and more, no topic is off-limits. Join us for a fun and fiercely competitive afternoon of quizzing and find out!
+    //mech
+    `EngiNova is a platform for students to showcase their innovative projects and engineering skills. The competition encourages creative problem-solving and technological advancements across disciplines. Participants will present their projects, emphasizing design, functionality, and ease of navigation.`,
+    `This event tests participants' mechanical skills by requiring them to assemble and disassemble a gear-based mechanism within a given time. Teams will demonstrate precision, efficiency, and technical expertise.`,
+    `In this hands-on contest, participants will forge a functional object from steel using traditional metalworking techniques. The competition emphasizes creativity, technical skill, and safety in metal forging.
     `,
-    `"Life of an Engineer" is a dynamic videography event inviting participants to creatively capture the essence of an engineer's journey. Whether it's the daily grind, the thrill of problem-solving, or the balance between work and life, this event challenges you to showcase the highs and lows of an engineer's world through your lens. Participants are encouraged to explore themes like innovation, perseverance, and the ever-evolving challenges faced by engineers. Whether your video is humorous, dramatic, or inspirational, it should authentically portray the unique and diverse experiences that define the life of an engineer`,
-    `The "Innovate India Model making Event" invites participants to showcase their creativity and technical prowess by constructing models or prototypes aligned with the theme of Digital India. This event encourages innovators to develop tangible representations of their ideas that contribute to the vision of a digitally empowered society. Participants can focus on areas such as smart cities, e-governance, digital infrastructure, or tech-driven education. The event fosters collaboration, as teams brainstorm and build projects that demonstrate how technology can solve real-world problems. The best models will be evaluated on creativity, functionality, and their potential impact on advancing Digital India.
+    `CADventure is a fast-paced computer-aided design (CAD) competition where participants will create 3D models using SOLIDWORKS. The event tests accuracy, design efficiency, and presentation skills.`,
+    //civil
+    `The Bridge Design Challenge is a hands-on structural engineering competition where teams construct a bridge using popsicle sticks and glue. The objective is to create a bridge that balances strength, efficiency, and design aesthetics. The bridges will be tested under load to determine their structural capabilities.
     `,
-    `‘Character Clash’ is an electrifying cosplay event where fans bring their favorite characters from anime, movies, video games, and comics to life. Participants, known as cosplayers, compete in a dynamic showdown, showcasing their creativity and craftsmanship through intricate costumes and performances. The event features intense cosplay contests, workshops, and interactive panels with industry experts. Attendees can explore a bustling marketplace filled with exclusive merchandise, artwork, and cosplay gear. Character Clash is more than a competition—it's a celebration of fandoms, where enthusiasts connect, share their passions, and immerse themselves in a vibrant, inclusive community.`,
-    `Unleash your coding genius! 'Crack N Code' is a thrilling competition where participants solve complex coding challenges and puzzles to showcase their skills. With a timer ticking, coders will battle to crack the codes, debug, and optimize their solutions. From algorithms to data structures, participants will demonstrate their mastery of programming languages and problem-solving prowess. Join us for a high-energy event that pushes coding limits. Who will crack the code and emerge victorious?
+    `Re-Civilize is an upcycling challenge where teams create functional or decorative models using waste materials. This event promotes sustainability and innovation in civil engineering.`,
+
+    `The Water Treatment Simulation event challenges teams to design a filtration system using provided materials. Participants will test their system's efficiency by purifying a sample of dirty water and analyzing the results.
     `,
-    `‘Anyday Anime’ is a creative platform where anime fans can bring their original ideas to life. It’s a hub for aspiring animators, writers, and artists to collaborate and develop unique anime concepts, from character design to storytelling. The platform offers tools, tutorials, and community support, enabling creators to share their work, receive feedback, and connect with like-minded enthusiasts. Whether you're a seasoned creator or just starting out, Anyday Anime provides the space and resources to turn your anime visions into reality, making it the perfect destination for anime creativity, any day.`,
-    `Cooking without fire refers to the preparation of food without using any direct heat sources like gas stoves, ovens, or open flames.
+    //aero
+    `The RC Plane Competition challenges participants to design, build, and pilot a remote-controlled aircraft. The goal is to achieve the longest flight duration and most stable flight path while adhering to design specifications.`,
+    `The Rocketry Challenge is designed to test participants’ skills in designing, building, and launching model rockets. The event aims to foster innovation, teamwork, and technical expertise in aerospace engineering. Participants must construct a functional rocket that meets the given specifications and successfully launch it to achieve optimal altitude and stability.
     `,
+    
+    `Drone Racing is a high-speed, skill-based competition where participants maneuver their drones through a challenging obstacle course. The event emphasizes precision, agility, and control as pilots navigate their drones through checkpoints and complete the track in the shortest possible time.`,
+    `Dronovation is a drone-based competition designed to test participants' piloting skills, drone maneuverability, and technical innovation. Participants will navigate their drones through a designated course, performing specific tasks such as object retrieval, precision landing, and obstacle avoidance. The event focuses on accuracy, control, and efficiency in drone operations.`,
+    `Nanosat Pratiyogita is an aerospace engineering competition where participants design, develop, and present a conceptual model of a nanosatellite. The event encourages innovation in miniaturized satellite technology for scientific research, communication, and space exploration. Participants will be judged on technical feasibility, innovation, and presentation skills.`,
+    //ece
+    `Mech Wars is a high-energy robotic combat event where participants design and build mechanical robots (Mech-Bots) equipped with weapons to compete in intense battles. The goal is to disable, or outlast the opponent’s robot in an arena setting. Teams must demonstrate innovation in design, technical skill in control, and strategic thinking during combat.`,
+    //phy
+    `Organized by the Physics Department, this event showcases innovative working and non-working models that highlight the role of science in everyday life. Participants will demonstrate scientific concepts and their practical applications, making science more accessible and engaging for all.`,
   ];
   const eventguid = [
     [
-      ["Theme", "Open"],
-      ["Time Limit", "2 hours"],
+      ["Entry Fee: ₹250 per team (4 members)."],
+      [
+        "Team Composition: Each team must consist of 4 registered players from the same department. No substitutes or extra players are allowed.",
+      ],
+      [
+        "Only mobile devices (Android/iOS), wired/wireless headphones, chargers, and pillows are permitted.",
+      ],
       ["Materials", "Participants must bring their own painting materials"],
       [
-        "Safety",
-        "Only skin-safe paints should be used; participants must take care of their models",
+        "Disqualification: Cheating, bug exploitation, ringers, or toxic behaviour will result in immediate disqualification.",
+      ],
+      [
+        "Phones will be thoroughly checked for hacks/mod files before entering the premises.",
+      ],
+      [
+        "Reporting Time: Teams must arrive one hour before the tournament starts for verification and seating arrangements.",
+      ],
+
+      ["Game Settings & Match Details"],
+      ["Perspective Mode: Third-Person Perspective (TPP)"],
+      [
+        "Disabled: Sound Visualization, Aim Assist, Red Zone, Flare Guns, Show Skeleton on Death",
+      ],
+      ["Enabled: Vague Information"],
+      ["Loot Settings: All Weapons x2, Scopes & Magazines x2"],
+      ["Maps: Erangel, Miramar, Sanhok, Vikendi"],
+      ["Groups of 16-24 teams in the initial phase."],
+      ["Groups of 16-24 teams in the initial phase."],
+      ["Players must have a minimum in-game level of 35."],
+      ["Player rank must be Platinum V or higher."],
+    ],
+    [
+      [
+        "The Hackathon is open to all students registered students at any higher education institute.",
+      ],
+
+      [
+        "Participants are required to work in teams consisting of a minimum of 3 to a maximum of 5 members.",
+      ],
+      ["The hackathon will be conducted in two rounds:"],
+      [
+        "Pre-liminary: Virtual round where teams submit their project ideas and prototypes.",
+      ],
+      [
+        "Final: In-person : To participate, teams must be available to present their proposals in the form of a PPT for a pre-liminary round",
+      ],
+      [
+        "The proposals will be submitted on a platform provided by the organizers.",
+      ],
+      ["The PPT format will be provided by the organizers."],
+      [
+        "The teams that advance to the final round will be invited to the venue for final presentation of their idea.",
+      ],
+      [
+        "Changes to the contents of the PPT can be made for the final presentation, however the format shall remain same.",
+      ],
+      [
+        "Teams can use an idea they had before the event. They can work on an idea that they have worked on before (as long as they do not re-use code).",
+      ],
+      [
+        "Teams can use libraries, frameworks, or open-source code in their projects. Working on a project before the event and open-sourcing it for the sole purpose of using the code during the event is against the spirit of the rules and is not allowed.",
+      ],
+      ["Projects that violate the Code of Conduct are not allowed."],
+      [
+        "Eligibility for Participation Certificate: The participant/team should have successfully checked in and submitted a proposal on the organizer’s platform during the Hackathon Timeline.",
+      ],
+      [
+        "All participants are required to carry their Identity Cards with them for identification and documentation purposes. No exemptions shall be entertained",
+      ],
+    ],
+    [
+      ["Open to all Tech Fest registered participants."],
+      ["Participants must register in advance (online or offline)."],
+      ["Late comers may not be accommodated if their slot has passed."],
+      [
+        "Each participant is allowed only one interview session, unless additional slots are available.",
+      ],
+      ["Participants must bring a valid college ID for verification."],
+      ["Duration: 15-20 minutes per candidate (may vary based on turnout)."],
+      [
+        "Rounds: Two rounds – participants must qualify in the first round to proceed to the second.",
+      ],
+      [
+        "focus Areas:o	Technical Interviews (CS/IT – DSA, OS, DBMS, etc.),Non-Technical Interviews (HR, Aptitude, Communication),Domain-Specific (ML, Web Development, Cybersecurity, etc.)",
+      ],
+      ["Dress Code:Formal attire is recommended."],
+      [
+        "Maintain professionalism; disrespectful behaviour will lead to disqualification.",
       ],
     ],
     [
       [
-        "Team Composition",
-        "The team should consist of 4 registered players from each department only. No extra members or substitutes will be allowed",
+        "Theme: Technology-related, original posters highlighting innovations or trends.",
       ],
       [
-        "Disqualification",
-        "The team will be disqualified if caught cheating, exploiting bugs, engaging in ringing, or displaying toxic behavior towards other players",
+        "Theme: Technology-related, original posters highlighting innovations or trends.",
+      ],
+      ["File Type: A3 or A4 JPEG, PNG, or PDF format."],
+      ["Time Limit: 2 hours to create the poster."],
+      [
+        "Presentation: Each participant gets 2-3 minutes to present their poster to judges.",
       ],
       [
-        "Arrival Time",
-        "Teams should be present 1 hour before the commencement of the tournament for head count and placement",
+        "Plagiarism, AI-generated designs, or inappropriate content will result in disqualification.",
       ],
+      ["Participants must report 30 minutes before the event."],
       [
-        "Registration Requirements",
-        "The minimum requirement for the ID for registration is a level 35 account, and the rank should be more than Platinum V",
+        "Participants may use their own laptops/tablets to design their digital posters.",
       ],
-      [
-        "Device Check",
-        "Phones will be thoroughly checked for hacks and mod files upon entering the tournament premises",
-      ],
-      [
-        "Team Representation",
-        "The In-Game Leader (IGL) from each team will represent their team and will be responsible for point tally, reporting discrepancies, or suspecting other players of hacking",
-      ],
+      ["All participants must carry a valid college ID."],
+      ["Open to all university students (any year or stream)."],
+      ["Individual participation only – no group submissions."],
+      ["Registration Fee ₹100 per participant."],
     ],
     [
-      [
-        "Robot Type",
-        "Participants must build and program a robot capable of navigating a pre-set course and suitable for off-roading",
-      ],
-      [
-        "Time Limit",
-        "Participants will have approximately 3 minutes to complete the race",
-      ],
-      [
-        "Operation",
-        "Robots must operate autonomously or through remote control",
-      ],
-      [
-        "Dimensions",
-        "Robots must not exceed the dimensions of 25cm × 20cm × 15cm (L × B × H)",
-      ],
-      [
-        "Disqualification",
-        "Any external assistance during the race will result in disqualification",
-      ],
-      [
-        "Track Penalty",
-        "Robots are required to stay on the track during the race; failure to do so will result in a penalty",
-      ],
-      ["Safety", "Robots must not cause damage to the track or other robots"],
-    ],
-    [
-      [
-        "Performance Limit",
-        "Each performance should be no longer than 3 minutes",
-      ],
-      [
-        "Content",
-        "All acts must be appropriate for a general audience and safe to perform on stage",
-      ],
-      [
-        "Categories",
-        "Talent can include singing, dancing, stand-up comedy, instrumental performance, etc.",
-      ],
-      [
-        "Non-Competitive",
-        "This is a showcase event; no prizes will be awarded but certificates will be provided",
-      ],
-      [
-        "Setup",
-        "Participants must arrange for any special equipment or props needed for their act",
-      ],
-    ],
-    [
-      [
-        "Originality",
-        "No plagiarism is allowed; the code must be original and created on the spot",
-      ],
-      ["Hosting", "The project must be hosted on GitHub"],
-      [
-        "Collaboration",
-        " No external help other than from the team member(s), if any, is allowed",
-      ],
-      [
-        "Disqualification",
-        "Any kind of nuisance created during the event will lead to immediate disqualification",
-      ],
+      ["The event is open to individuals or teams (max 4 members per team)."],
+      ["Open to all university students (any year or stream)."],
+      ["Participants must register before the deadline."],
+      ["Time limit: 90 minutes."],
       [
         "Resources",
         "The participants will be provided with VS Code as their IDE.",
       ],
-      [
-        "Assets",
-        "Participants are instructed to bring their own images in a pen drive (min 5- max 10) to beautify their website.",
-      ],
-      [
-        "Technical",
-        "HTML and CSS are compulsory to be used whereas use of JavaScript is optional and if a participant uses JS, they will be awarded 5% extra points over the points they receive in the functionality criteria."
-      ]
+      ["Reporting Time: Attendees must report 30 minutes before the event."],
+      ["Internet usage is not allowed during the competition."],
+      ["Internet usage is not allowed during the competition."],
+      ["Participants must carry their valid college ID cards."],
     ],
     [
       [
@@ -204,194 +241,254 @@ Who will be crowned the ultimate 'Canvas on Face' champion?
       ],
     ],
     [
-      ["Theme", "Your favourite view of Uttaranchal University"],
-      ["Time Limit", "1.5 hours"],
-      ["Materials", "All materials must be brought by participants"],
+      ["Open to all B.Tech students"],
+      ["No participant can be part of multiple teams."],
+      ["The quizmaster’s decision is final."],
       [
-        "Presentation",
-        "The artwork should be presented with a brief explanation (2-3 minutes)",
+        " 1.Preliminary Round (MCQ-Based):o	20 questions covering all tech domains.30 seconds per question.•	Preliminary Round: Correct (+4), Wrong (-1).",
       ],
+      [
+        "2.	Semi-Final Round (Buzzer Round).Buzzer Round: Correct (+5), Wrong (-2)",
+      ],
+      ["Negative marking for incorrect answers."],
+      ["3.	Final Round (Rapid Fire & Situation-Based Questions)"],
+      ["registration fee: ₹200 per participant"],
     ],
+    //mech
     [
-      ["Registration", "Register online; no on-site registrations"],
-      ["Location", "Near Lamour Bakehouse"],
-      ["Event Day", "Arrive 30 minutes early. Wear comfortable attire"],
+      ["Team Size", " 2 to 5 members per team"],
       [
-        "Format",
-        "Complete tasks to qualify for the next level; no skipping allowed",
+        "Project Display",
+        " Teams must exhibit their projects throughout the event; failure to do so may result in disqualification.",
       ],
-      ["Scoring", "Points based on task completion and time"],
+      ["Equipment", " Participants must bring their own tools and materials."],
+      ["Eligibility", " Open to students from any discipline."],
+      ["Scoring Criteria: Emphasis on good design and easy navigation."],
       ["Conduct", "Follow safety rules; no cheating"],
       [
-        "Prize",
-        "The participant to finish all the tasks while following safety rules wins",
+        "Conduct: The judges' decisions are final, and no disputes will be entertained.",
+      ],
+      [
+        "Conduct: The judges' decisions are final, and no disputes will be entertained.",
       ],
     ],
     [
+      ["Team Size", "2 members per team"],
+      ["Time Allocation: 15–30 minutes per phase (assembly and disassembly)."],
       [
-        "Theme",
-        "The event will focus on representing the '90s Indo-Western dress code, blending traditional and modern elements",
+        "Tools & Materials: Only tools and components provided by organizers are allowed; external parts are prohibited.",
       ],
       [
-        "Team Structure",
-        [
-          "One team will only be allowed from each department",
-          " Each department team should consist of 6 members i.e. 3 boys & 3 girls",
-        ],
+        "Assembly Rules: Gears must be correctly meshed following the blueprint for smooth rotation. No modifications allowed.",
       ],
       [
-        "Event Day",
-        "Each department can field only one team, which must consist of 6 members—3 boys and 3 girls",
+        "Disassembly Rules: Gears and shafts must be carefully removed and returned to their original organized state.",
       ],
       [
-        "Attire",
-        [
-          "Participants must bring their own costumes and accessories, ensuring they align with the theme and are appropriate for a general audience",
-          " All attire should be tasteful and respectful, avoiding any offensive or inappropriate content",
-          " Costumes and props should not obstruct movement or pose a tripping hazard, and no hazardous materials are allowed on stage",
-        ],
-      ],
-      [
-        "Time Limit",
-        "Each team will have a maximum of 10 minutes to present their walk and poses",
-      ],
-      ["Safety", "No hazardous materials/props are allowed on stage."],
-      [
-        "Participants must ensure that their costumes and props do not obstruct movement or pose a tripping hazard",
+        "Supervision: Judges will monitor adherence to rules and gear handling.",
       ],
     ],
     [
-      ["Format", "Multiple rounds (MCQs, rapid-fire, final round)"],
-      ["Topics", " Engineering, technology, general knowledge of tech"],
-      ["Time Duration", "1 hour"],
+      ["Team Size", "2 members per team"],
       [
-        "Rules",
-        "No electronic devices allowed; decisions by quiz masters are final",
+        "Materials: Only the steel bar and tools provided by organizers may be used (e.g., hammers, anvils, tongs).",
       ],
       [
-        "Tie-Breaker",
-        "In case of a tie, an additional round of questions will determine the winner",
-      ],
-    ],
-    [
-      ["Theme", "Life of an Engineer"],
-      ["Duration", "Each video must be 1-2 minutes long"],
-      [
-        "Content",
-        "The content must be original and relevant to the theme provided",
+        "Forging Process: Teams must shape the steel into a specified design using forging techniques such as hammering and pressing.",
       ],
       [
-        "Submission Deadline",
-        "Videos must be submitted by 10th September, 2024",
+        "Design Constraints: The final object must not exceed specified dimensions or weight and must demonstrate functionality or innovation.",
       ],
       [
-        "Disqualification",
-        "Plagiarized content or the use of AI will lead to immediate disqualification",
-      ],
-      ["Team Size", "Maximum of 2 people per team"],
-    ],
-    [
-      [
-        "Working Model Requirement",
-        "The model presented must be fully functional and demonstrate the intended engineering principles or concepts. Non-functional or incomplete models will not be accepted for the presentation.",
+        "Safety Requirements: Participants must wear gloves, goggles, and aprons while handling hot steel.",
       ],
       [
-        "Material Restrictions",
-        "The use of thermocol (polystyrene foam) is strictly prohibited in the construction of the models. Participants are encouraged to use sustainable, durable, and safe materials that effectively showcase their design.",
-      ],
-      [
-        "Model Report",
-        "A detailed report accompanying the model is mandatory. The report should include: An introduction to the concept or problem being addressed, a description of the model's design, materials used, and working principles, step-by-step documentation of the construction process, an analysis of the model's performance and any challenges faced, and conclusions or recommendations for future improvements.",
-      ],
-      [
-        "Presentation Guidelines",
-        "Prepare a brief oral presentation (5-10 minutes) to explain your model, its functionality, and its real-world applications. Be ready to answer questions from the judges and audience.",
+        "Submission: Teams must submit their forged piece for evaluation; judges' decisions are final.",
       ],
     ],
     [
+      ["Team Size: 2 members per team."],
+      ["Software: Systems with pre-installed SOLIDWORKS will be provided."],
       [
-        "Costume",
-        "Participants must wear costumes representing a character from any genre (e.g., anime, movies, video games).",
+        "Time Limit: Designs must be completed and submitted within 15 minutes.",
       ],
       [
-        "Time Limit",
-        "Participants will have 2 minutes to showcase their character on stage.",
+        "Evaluation: Accuracy and clarity of design will be the primary scoring factors.",
+      ],
+    ],
+    //civil
+    [
+      ["Teams must consist of 2-4 members."],
+      [
+        "Only the provided materials (150 popsicle sticks and fevicol glue) can be used.",
+      ],
+      ["The bridge must span at least 50 cm and have a minimum width of 5 cm."],
+      [
+        "No external reinforcements (metal wires, extra adhesives, etc.) are allowed.",
       ],
       [
-        "Safety",
-        "No sharp objects, real weapons, or dangerous materials are allowed in the cosplay.",
+        "Bridges will be tested by placing weights at the mid-span until failure.",
+      ],
+      ["Construction time: 3 hours."],
+      ["Participants must report 30 minutes before the event."],
+    ],
+    [
+      ["Team Size: 2-5 members."],
+      [
+        "Materials Allowed: Plastic bottles,Cardboard boxes,E-waste (CDs, wires, motherboard scraps),Glass bottles,Aluminium cans,Broken tiles/ceramic pieces,Used straws & ice cream sticks",
+      ],
+      ["Model Type: Can be either static or working."],
+      ["Time Limit: 10 minutes to present and explain the model."],
+    ],
+    [
+      ["Teams must consist of 2-4 members."],
+      ["Participants will receive sand, gravel, charcoal, and filter paper."],
+      [
+        "No additional materials are allowed except those provided by the university.",
       ],
       [
-        "Music Track Submission",
-        "Participants are required to submit their music tracks to the student coordinator prior to the event. The contact number for the student coordinator has been provided in the registration form. Ensure that your tracks are submitted in MP3 format and by the deadline to avoid any last-minute issues.",
+        "Participants must bring their own cylindrical container (Diameter: 10-13 cm, Height: 30-50 cm).",
+      ],
+      [
+        "The filtration system must be set up within 2 hours, followed by 10 minutes of explanation.",
+      ],
+      [
+        "Filtered water will be tested for: Clarity,pH balance,Total Dissolved Solids (TDS) reduction ",
+      ],
+    ],
+    //aero
+    [
+      ["Teams can have a maximum of 4 members."],
+      ["The RC planes must be within the given weight and size limits."],
+      [
+        "The plane must successfully take off, complete the designated flight path, and land safely.",
+      ],
+      ["External interference with radio signals is prohibited."],
+      ["Each team gets two attempts, and the best score will be considered."],
+    ],
+    [
+      ["Each team must consist of 3-5 members."],
+      [
+        "The rockets should be designed according to the given size and weight constraints.",
+      ],
+      [
+        "The rockets should be designed according to the given size and weight constraints.",
+      ],
+      ["Use of unauthorized or hazardous materials is strictly prohibited."],
+      [
+        "Teams will be given a fixed time to assemble and launch their rockets.",
       ],
     ],
     [
+      ["Each team can have 1-2 pilots and a support crew."],
       [
-        "Platform",
-        "The competition will be held on a pre-determined platform.",
+        "Drones must adhere to size and weight regulations provided before the event.",
       ],
       [
-        "Coding Languages",
-        "Participants can code in any coding language supported by the platform.",
+        "Participants must complete the race by passing through all designated checkpoints",
       ],
       [
-        "Disqualification",
-        "Plagiarism or cheating in any form leads to immediate disqualification.",
+        "External assistance or modifications after the start of the race are not allowed.",
       ],
-      ["Time Allotted", "90 minutes"],
-      [
-        "Reporting Time",
-        "2:30pm (participants must be present 10 minutes before the event starts)",
-      ],
+      ["Any damage to drones mid-race is the responsibility of the team."],
     ],
     [
-      [
-        "Competition Format",
-        "Participants must create a short anime concept or storyboard up to 3 panels with their own original storyline.",
-      ],
-      ["Theme", "Anime"],
-      [
-        "Solo Participation",
-        "The competition is an individual event. Teaming up with others is not allowed.",
-      ],
-      [
-        "Medium",
-        "The competition will be conducted digitally. Participants are required to bring their own digital drawing pad and any other necessary equipment.",
-      ],
-      [
-        "Submission Guidelines",
-        "The storyboard must consist of a maximum of 3 panels. All entries must be original works created during the competition time frame. Participants must provide a brief explanation of their concept, storyline, and creative process along with their submission.",
-      ],
+      ["Team Size: 2-4 members per team."],
+      ["Maximum weight: As per event regulations."],
+      ["Flight range: Must be within the designated competition area."],
+      ["Battery-powered drones only; fuel-based drones are prohibited."],
+      ["Participants will navigate through multiple checkpoints with varying difficulty levels.Tasks may include precision landing, cargo drop, and obstacle navigation."],
+      ["Drones must be operated within designated altitude limits."],
+      ["Participants must follow all safety instructions provided by event coordinators."],
+      ["Disqualification will be based on Loss of control leading to unsafe flight. Violation of airspace boundaries. Use of external assistance or pre-programmed flights unless specified."]
+
     ],
     [
-      ["Time Limit", "1.5 hours"],
-      ["Team Size", "One team may contain a maximum of 2 members."],
-      ["Cleanliness", "Participants should maintain cleanliness."],
+      ["Team Size: 2-5 members per team."],
+    ["The model must resemble an actual nanosatellite in structure and function."],
+    ["The design should include critical components such as power systems, communication modules, and payload capabilities."],
+    ["Teams must submit a detailed report on their satellite's design, functionality, and intended application."],
+    ["A prototype model must be presented during the event."],
+    ["Each team will have 10 minutes to present their design, followed by a Q&A session with judges."],
+    ["Disqualification will be based on Plagiarized designs or pre-built models.Failure to explain key aspects of the design."]  
+  ],
+    //ece
+    [
+      [
+        "Each team must build either a wired, remotely controlled, or autonomous Mech-Bot."
+      ],
+      [
+        "The robot must adhere to specified size, weight, and weapon constraints."
+      ],
+      [
+        "Safety is a priority; Mech-Bots should not pose a risk to competitors, judges, or the audience."
+      ],
+      [
+        "Teams must submit a technical report detailing their bot’s design, components, and safety features."
+      ]
+    ],
+
+    [
+      //phy
+      ["Each team must have a minimum of 2 participants."],
+      [
+        "Teams must display their project throughout the event; failure to do so may lead to disqualification.",
+      ],
+      [
+        "	Participants must bring their own required materials for their models.",
+      ],
+      ["Good design and easy navigation will be key judging factors."],
+      ["	Open to students from all disciplines."],
+      [
+        "	The decision of the judges is final, and no disputes will be entertained.",
+      ]
     ],
   ];
+
   const judCriteria = [
-    ["Creativity", "Adherence to Theme", "Neatness"],
+    //game
     [
-      "In a 10-point scoring structure, teams prefer to play aggressiFvely, as it offers fewer placement points compared to a 15-point system. Since each kill still counts as one point, teams focus on making aggressive moves to collect more points. In this structure, the winning squad in each match will achieve 10 placement points. The second and third ranked teams will acquire six and five placement points, respectively.",
-      "Points Distribution System for a Single Match:",
-      "1st Place: 10 points",
-      "2nd Place: 6 points",
-      "3rd Place: 5 points",
-      "4th Place: 4 points",
-      "5th Place: 3 points",
-      "6th Place: 2 points",
-      "7th Place: 1 point",
-      "8th Place: 1 point",
+      "The tournament follows a 10-point placement structure, promoting aggressive gameplay over passive survival.",
+      "Placement Points System (Per Match):",
+      "1st Place: 10 Points",
+      "2nd Place: 6 Points",
+      "3rd Place: 5 Points",
+      "4th Place: 4 Points",
+      "5th Place: 3 Points",
+      "6th Place: 2 Points",
+      "7th & 8thPlace: 1 Point Each",
+      "Kill Points: 1 point per kill",
     ],
-    ["Speed", "Accuracy", "Obstacle navigation", "Overall performance"],
-    ["Speed", "Accuracy", "Obstacle navigation", "Overall performance"],
+    //cse
     [
-      "Code Quality (20%)",
-      "Design (30%)",
-      "Functionality (25%)",
-      "Creativity (15%)",
-      "Content Relevance & Presentation (10%)",
+      "Teams will be judged on these five criteria. Judges will weigh the criteria equally. During judging, participants should try to describe what they did for each criterion in their project via the PPT presentation.",
+      "●	Technology",
+      "●	Design",
+      "●	Completion",
+      "●	Originality",
+      "●	Feasibility",
+      "The judge's decision shall be final and cannot be challenged",
+      "Entry fees: 1000/- per Team",
+    ],
+    [
+      "The event will be judged based on the following criteria:",
+      " Creativity and Originality",
+      " Technical Skills",
+      " Communication Skills",
+      "Overall Performance",
+    ],
+    [
+      "Screening Round: Judges evaluate originality, relevance, and adherence to guidelines. AI-generated or plagiarized designs will be rejected.",
+      "Presentation Round: Participants present their posters in 2-3 minutes, judged on originality, design, clarity, accuracy, and presentation skills.",
+      "Final Decision: The judge’s decision is final and cannot be challenged.",
+    ],
+    [
+      "Submissions will be evaluated based on the following criteria:",
+      "Clarity & Insight (30%) – How well the visualization communicates insights.",
+      "Creativity & Innovation (20%) – Uniqueness and originality in visualization.",
+      "Aesthetic Appeal (20%) – Visual design, colour choices, and readability.",
+      "Technical Accuracy (20%) – Correct use of data and methodology.",
+      "•	Interactivity (10%) – Bonus points for interactive visualizations.",
     ],
     [
       "Speed & Time",
@@ -400,237 +497,263 @@ Who will be crowned the ultimate 'Canvas on Face' champion?
       "Strategy & Tactics",
       "The boat's ability to complete the course",
     ],
-    ["Creativity", "Technique", "Neatness", "Overall impact"],
-    ["Task Completion", "Time Management", "Speed", "Performance", "Penalties"],
     [
-      "Creativity",
-      "Theme adherence",
-      "Presentation",
-      "Coordination",
-      "Confidence",
+      "based on your performance in the quiz rounds, including the preliminary, semi-final, and final rounds.",
     ],
     [
-      "Accuracy",
-      "Depth of Knowledge",
-      "Quick Thinking",
-      "From the first round, we'll select the top 7 teams.",
-      "From the second round, we'll select only the top 3 teams.",
+      "Design & Innovation (40%) – Originality and creativity in the project.",
+      "Functionality (30%) – Practical application and usability.",
+      "Presentation (20%) – Clarity and effectiveness of demonstration.",
+      "Navigation & User Experience (10%) – Ease of use and accessibility.",
+    ],
+    //mech
+    [
+      "Speed (50%) – Time taken to complete both assembly and disassembly.",
+      "Functionality & Precision (30%) – Proper gear alignment and movement.",
+      "Safety & Organization (20%) – Proper handling of components and workspace discipline.",
     ],
     [
-      "Storytelling",
-      "Creativity & Originality",
-      "Technical Quality - Lighting & Audio",
-      "Cinematography",
-      "Editing",
-      "Impact and Message",
-      "Overall Impression",
+      "Creativity (20%) – Originality in design.",
+      "Forging Technique (30%) – Proper use of forging methods.",
+      "Functionality (30%) – Practical application of the forged object.",
+      "Safety & Rule Adherence (20%) – Compliance with safety measures and event regulations.",
     ],
     [
-      "Creativity",
-      "Functionality",
-      "Material Choice",
-      "Report Quality",
-      "Presentation Skills",
+      "Accuracy (50%) – How well the design matches the provided specifications and dimensions.",
+      "Presentation (30%) – Quality of exported views and clarity of technical drawings.",
+      "Presentation (30%) – Quality of exported views and clarity of technical drawings.",
+    ],
+    //civil
+    [
+      "Load-Bearing Capacity (40%) – Maximum weight the bridge can hold before failure.",
+      "Structural Efficiency (30%) – Ratio of weight supported to bridge weight.",
+      "Aesthetic & Design (20%) – Neatness, creativity, and adherence to engineering principles.",
+      "Presentation & Explanation (10%) – Justification of the design approach.",
     ],
     [
-      "Accuracy",
-      "Creativity",
-      "Craftsmanship",
-      "Performance",
-      "Originality",
-      "Posing",
-      "Stage Presence",
+      "Innovation (30%) – Uniqueness and creativity of the design.",
+      "Waste elimination (30%) – Effectiveness in repurposing discarded materials.",
+      "Aesthetic appeal (20%) – Neatness, design, and creativity.",
+      "Presentation (20%) – Clarity and justification of the model.",
     ],
-    ["Correctness", "Efficiency", "Complexity"],
+
     [
-      "Creativity",
-      "Originality",
-      "Adherence to Theme",
-      "Artistic Skills",
-      "Explanation",
+      "Water Clarity & Purification (50%) – How clean the filtered water is.",
+      "Efficiency of Filtration (30%) – Speed and effectiveness of the process.",
+      "Presentation (20%) – Justification of design and methodology.",
     ],
-    ["Taste", "Creativity", "Presentation"],
+
+    //aero
+    [
+      "Flight Duration (40%) – Longest sustained flight time.",
+      "Maneuverability (30%) – Ability to complete the given course.",
+      "Landing Precision (20%) – Controlled and smooth landing",
+      "Design & Build Quality (10%) – Structural integrity and aerodynamics.",
+    ],
+    [
+      "Design & Innovation (30%) – Creativity in rocket design and structure.",
+      "Flight Performance (40%) – Stability, altitude, and trajectory of the rocket.",
+      "Safety Measures (20%) – Adherence to safety protocols and proper handling.",
+      "Presentation (10%) – Explanation of design choices and functionality.",
+    ],
+    [
+      "Speed & Completion (50%) – Fastest time to complete the course.",
+      "Control & Stability (30%) – Precision in handling the drone.",
+      "Obstacle Avoidance (20%) – Skill in maneuvering through checkpoints.",
+    ],
+    [
+      "Navigation & Maneuverability (30%) – How efficiently the drone moves through the course.",
+      "Task Completion (30%) – Accuracy in performing designated tasks.",
+      "Time Efficiency (20%) – Speed in completing the course.",
+      "Safety & Control (20%) – Adherence to safety protocols and smooth handling of the drone."
+    ],
+    [
+      "Innovation & Uniqueness (30%) – Originality and creativity in satellite design.",
+      "Technical Feasibility (30%) – Practicality and application of the model in real-world scenarios.",
+      "Presentation & Explanation (20%) – Clarity, confidence, and effectiveness in delivering the concept.",
+      "Functionality & Design (20%) – Accuracy of the prototype and completeness of the satellite structure."
+    ],
+    //ece
+    [
+      "Damage Inflicted (40%) – The extent of physical damage to the opponent’s bot.",
+      "Control & Maneuverability (30%) – Ability to effectively navigate and operate the bot.",
+      "Aggression (20%) – How actively the bot engages in battle.",
+      "Defense & Endurance (10%) – How well the bot withstands attacks.",
+    ],
+    //phy
+    [
+      "All scientific facts must be accurate and evidence-based.",
+      "Sources should be from reputable journals, books, or websites.",
+      "If any claim is theoretical or debated, it must be clearly stated.",
+      "The model should demonstrate practical applications of science in everyday life (e.g., health, environment, technology, transportation).",
+      "It should highlight how science makes life easier, safer, and more efficient.",
+      "The explanation should be simple and free from excessive jargon to ensure accessibility for all age groups.",
+      "Models should include visuals, diagrams, and real-life examples for better engagement.",
+      "Live demonstrations or experiments are encouraged, provided they are conducted safely.",
+    ],
   ];
   const facultyCod = [
-    ["Miss Sakshi Koli", "Miss Riya Kukreti", "Mr. Abhishek Jain"],
-    [
-      "Mr. Ankit Chamoli",
-      "Mr. Sanjeev Sharma",
-      "Ms. Pooja Verma",
-      "Ms. Sadhna Bhatt",
-      "Mr. Vineet Kumar Saini",
-    ],
-    [
-      "Dr. Sachin Kumar",
-      "Mr. Sunil Sharma",
-      "Mr. Amit Saini",
-      "Mr. Vishal Singh",
-      "Mr. Amit Kumar",
-    ],
-    [
-      "Dr. Sachin Kumar",
-      "Mr. Yashwant Singh Bisht",
-      "Dr. Basant Ballabh Dumka",
-      "Mr. Shailendra Tiwari",
-      "Mr. Alok Kumar",
-      "Mr. Divij Arora",
-    ],
-    [
-      "Mr. Ramnarayan",
-      "Ms. Roosha Shamoon",
-      "Ms. Neelima Singh",
-      "Ms. Nandini Prajapati",
-    ],
-    [
-      "Mr. Kshitij Pandey",
-      "Mr. Divij Arora",
-      "Mr. Mohit Chand Sagar",
-      "Mr. Rohan Kukreti",
-    ],
-    [
-      "Mr. Gaurav Thakur",
-      "Mr. Gaurav Singh Negi",
-      "Ms. Shreya Suman",
-      "Mr. Mohit Kumar",
-    ],
-    [
-      "Dr. Pinki Chugh",
-      "Mr. Gaurav Kumar",
-      "Dr. Ajay Tiwari",
-      "Dr. Narendra Kumar",
-    ],
-    [
-      "Dr. Ruby Pant",
-      "Mr. Vinod Balmiki",
-      "Ms. Pooja Verma",
-      "Ms. Nishima Chaddha",
-      "Mr. Jitendra Kumar Gupta",
-    ],
-    [
-      "Mr. Arpit Goel",
-      "Mr. Gopal Krishna",
-      "Mr. Alok Sati",
-      "Mr. Prem Prakash",
-    ],
-    [
-      "Dr. Rajiv Kumar",
-      "Ms. Navjyoti Agarwal",
-      "Ms. Priyanka Chauhan",
-      "Mr. Anuj Kumar",
-    ],
-    [
-      "Mr. Ashish Pathani",
-      "Mr. Arpit Goel",
-      "Mr. Vivek John",
-      "Mr. Saurabh Aggarwal",
-      "Mr. Vinod Balmiki",
-      "Ms. Vasu",
-    ],
-    [
-      "Ms. Amita Bisht",
-      "Mr. Anurag Kumar",
-      "Ms. Stuti Bhatt",
-      "Dr. Surya Prakash Gairola",
-    ],
-    ["Ms. Roosha Shamoon", "Ms. Pinki Uniyal", "Mr. Sukesh Kumar Bhagat"],
-    ["Ms. Pratibha Dimri", "Ms. Shraddha Kalkhundiya", "Mr. Jitendra Kumar"],
-    ["Ms. Anuradha Brijwal (CSE)", "Ms. Ankita Butoiya", "Ms. Garima Panwar"],
+    //gam
+    ["Mr. Ankit Chamoli"],
+    //cse
+    ["Mr. Mohit Kumar"],
+    ["Mr. Mohit Kumar"],
+    ["Mr. Mohit Kumar"],
+    ["Mr. Mohit Kumar"],
+    ["Mr. Mohit Kumar"],
+    ["Mr. Mohit Kumar"],
+    //mech
+    ["Mr.Vivek John"],
+    ["Mr.Vivek John"],
+    ["Mr. Vivek John"],
+    ["Mr.Vivek John"],
+    //civil
+    ["Mr. LokNath Kumar"],
+    ["Mr. Vivek John"],
+    ["Mr. Ashish Pathani"],
+    //aero
+    ["Mr. Ashish Pathani"],
+    ["Ms. Amita Bisht"],
+    ["Ms. Roosha Shamoon"],
+    ["Mr. Divij Arora"],
+    ["Mr.Divij Arora"],
+    //ece
+    ["Ms. Pooja Jain"],
+    //phy
+    ["deepak"],
   ];
   const studentCod = [
-    ["Diya Srivastava", 8299073582],
-    ["Devansh Gupta", 6399909394],
-    ["Kanik Mittal", 8800462908],
-    ["Abhishek Ranjan", 9508600483],
-    ["Ankur Verma", 7667222066],
-    ["Awie Rajesh", 6201712875],
-    ["Awie Rajesh", 6201712875], // Duplicate name
-    ["Himanshi", 7302279003],
-    ["Swati Mishra", 7417548398],
-    ["Ms. Khushi Rana", 9896023532],
-    ["Aryan Singh Negi", 9557229620],
-    ["Shivam Kumar", 8825251672],
-    ["Chahat Chauhan", 7248778119],
-    ["Hasini Adimulam & Shreya Gupta", "9577161555 & 7505054765"],
-    ["Ambar Kumar", 8434781667],
-    ["Shreya Gupta", 7505054765], // Duplicate name
+    //game
+    ["Daksh Vijay Singh", 7657820141],
+    //cse
+    ["Priyanshi Gupta", 7321843577],
+    ["Shivanshu Gaur", 7505036096],
+    ["Souhrik Talukdar", 7076355262],
+    ["Prashant Tiwari ", 9528923288],
+    ["Rohit Shankar", 8292411655],
+    ["Rohit Arya", 7088929781],
+    //mech
+    ["Aryan Kumar", 8279684028],
+    ["Avneesh Pal", 8077499135],
+    ["Vivek Kumar", 7505708594],
+    ["Vivek Kumar", 7505708594],
+    //civil
+    ["Shivam Raj Patel", 8409140698],
+    ["Nishant Singh", 7857085450],
+    ["Rudraksha Sharma", 7303822434],
+
+    //aero
+    ["Deepak Arya", 9528352531],
+    ["Gauri Rana", 6200289570],
+    ["Ujjwal Rana", 9560548456],
+    ["Prateek Bhatt",7498496672],
+    ["Abhay Dhasmana",7417075478],
+    //ece
+    ["Bastav Dutta", 6900186459],
+
+    //phy
+    ["Gaurav Yadav", 9968548565] // Duplicate name
   ];
 
   const date = [
-    "September 12th, 2024",
-    " September 12th, 2024",
-    "September 13th, 2024",
-    "September 12th, 2024",
-    "September 12th, 2024",
-    "September 13th, 2024",
-    "September 13th, 2024",
-    "September 12th, 2024",
-    "September 12th, 2024",
-    "September 12th, 2024",
-    "September 11th, 2024",
-    "September 13th, 2024",
-    "September 12th, 2024",
-    "September 12th, 2024",
-    "September 12th, 2024",
-    "September 13th, 2024",
+    "25th-26th April 2025",
+    "25th-26th April 2025",
+    "25th-26th April 2025",
+    "25th-26th April 2025",
+    "25th-26th April 2025",
+    "25th-26th April 2025",
+    "25th-26th April 2025",
+    "25th-26th April 2025",
+    "25th-26th April 2025",
+    "25th-26th April 2025",
+    "25th-26th April 2025",
+    "25th-26th April 2025",
+    "25th-26th April 2025",
+    "25th-26th April 2025",
+    "25th-26th April 2025",
+    "25th-26th April 2025",
+    "25th-26th April 2025",
+    "25th-26th April 2025",
+    "25th-26th April 2025",
+    "25th-26th April 2025",
+    "25th-26th April 2025"
   ];
   const time = [
-    "11:00 AM - 1:00 PM",
-    "9:30 AM - 01:30 PM",
-    "10:00 AM onwards",
-    "2:00 PM - 4:00 PM",
-    "10:30 AM - 12:30 PM",
-    "10:00 AM onwards",
-    "2:30 PM - 3:30 PM",
-    "2:00 PM – 3:00 PM",
-    "10:00 AM - 11:30 AM",
-    "2:30 PM – 3:30 PM",
-    "2:30 PM – 4:30 PM",
-    "10:00 AM onwards",
-    "11:30 AM – 1:30 PM",
-    "2:30 PM – 4:00 PM",
-    "2:30 PM – 4:00 PM",
-    "10:00 AM onwards",
+    "09:30 AM",
+    "09:30 AM",
+    "09:30 AM",
+    "09:30 AM",
+    "09:30 AM",
+    "09:30 AM",
+    "09:30 AM",
+    "09:30 AM",
+    "09:30 AM",
+    "09:30 AM",
+    "09:30 AM",
+    "09:30 AM",
+    "09:30 AM",
+    "09:30 AM",
+    "09:30 AM",
+    "09:30 AM",
+    "09:30 AM",
+    "09:30 AM",
+    "09:30 AM",
+    "09:30 AM",
+    "09:30 AM",
   ];
   const venue = [
-    "UIT Ground Floor",
-    "Central Computer Lab",
-    "UIT Premises",
-    "In front of Guest House, UU",
-    "Central Computer Lab",
-    "UIT Premises",
-    "UIT Premises",
-    "Near Lamour Bakehouse",
-    "Swami Vivekananda Auditorium",
-    "Will be allotted soon",
-    "Will be allotted soon",
-    "Ground Floor (UIT)",
-    "Swami Vivekananda Auditorium",
-    "Central Computer Lab",
-    "Will be allotted soon",
-    "Ground floor UIT",
+    "UIT",
+    "UIT",
+    "UIT",
+    "UIT",
+    "UIT",
+    "UIT",
+    "UIT",
+    "UIT",
+    "UIT",
+    "UIT",
+    "UIT",
+    "UIT",
+    "UIT",
+    "UIT",
+    "UIT",
+    "UIT",
+    "UIT",
+    "UIT",
+    "UIT",
+    "UIT",
+    "UIT",
   ];
   const title = [
-    ["Code Storm", "Hackathon"],
+    //game
     ["Vijay Ghosh", "BGMI"],
-    ["Info Graphica", "Data Visualization"],
-    ["Simu Hire",, "Mock Interview"],
-    ["Vidhya Vrith", "Tech Quiz"],
-    ["Nal Neel", "Bridge Design Competition"],
-    ["Prathirupan Dristikon", "Model Presentation"],
-    ["Ignition War", "Rocket Flying"],
-    ["Vihangam", "Drone Flying"],
-    ["Vimaan Shreshta", "RC Plane Flying"],
-    ["Mech War", "E-Robo War"],
-    ["Pixel Pulse", "Technical Poster Making"],
+    //cse
+    ["Code Storm", "Hackathon"],
+    ["Simu Hire", "Mock Interview"],
+    ["Pixel Pulse", "Tech Poster Making"],
     ["Srijan Samvaad", "Tech Talk"],
-    ["EngiNova", "Project ShowCase"],
-    ["Yantra Sangam", "Assembly Dissembly"],
-    ["Kala Manthan", "Metal Forging/ Food Design"],
+    ["Info Graphica", "Data Visualization"],
+    ["Vidhya Vrith", "Tech Quiz"],
+    //mech
+    ["ENGINOVA ", "PROJECT SHOW "],
+    ["Yantra sangam", "Assembly Disassembly"],
+    ["KALA MANTHAN ", "Metal Forging/ Food Design "],
     ["CADventure", "Computer Aided Design"],
+    //civil
+    ["nalneel", "Bridge Design Challenge"],
+    ["RE-CIVILIZED", "Best Out of Waste"],
     ["Amrit Dhara", "Water Treatment Stimulation"],
-    ["Re-Civilized", "Best Out Of Waste"],
+    //aero
+    ["VIMAAN SHRESHTHA ", "RC Plane Competition"],
+    ["Ignition War", "Rocket Launching"], // Fixed improper nesting
+    ["VIHANGAM", "Drone Racing"],
+    ["Dronovation","Desing of Drones and RC Plane"],
+    ["NanoSat Pratiyogita","CubeSat Competition"],
+    //ece
+    ["MECH WAR ", "E-ROBO WAR"],
+    //phy
+    ["PRATIRUPAN DRISTIKON ", "Model Presentation on Science in Everyday Life"],
   ];
-
   return (
     <Eventspage
       title={title[index]}

@@ -1,110 +1,121 @@
-
 "use client";
 import Image from "next/image";
+import ImageBox from "./components/box";
 import Card from "./components/Card";
 import { useRef } from "react";
 import Faq from "./components/faq";
 import Link from "next/link";
 export default function Home() {
-  const gamingContent=[
-    { title: "Vijay Ghosh", src: "anime.jfif", href: "/event/vijayghosh" },
+  const gamingContent = [
+    { title: "Vijay Ghosh", src: "BGMI.png", href: "/event/vijayghosh" },
   ]
   //cse
   const cardcontent1 = [
     {
-    title: "Code Storm",
-    src: "BGMI-Background-Images.jpg",
-    href: "/event/codestorm",
-  },    
-  { title: "Simu Hire", src: "./painting.jpg", href: "/event/simuhire" },
-    
-  {
-    title: "Pixel Pulse",
-    src: "cooking.jpg",
-    href: "/event/pixelpulse",
-  },
-  {
-    title: "Srijan Samvaad",
-    src: "canvasonfaces.jpg",
-    href: "/event/Srijansamvaad",
-  },
-  {
-    title: "Info Graphica",
-    src: "./sprint.jpg",
-    href: "/event/infographica",
-  },
-  {
-    title: "Vidhya Vrith",
-    src: "./webdesign.jfif",
-    href: "/event/vidhyavrith",
-  },
+      title: "Code Storm",
+      src: "hackathon.png",
+      href: "/event/codestorm",
+    },
+    {
+      title: "Simu Hire",
+      src: "./Mock interview.png",
+      href: "/event/simuhire"
+    },
+
+    {
+      title: "Pixel Pulse",
+      src: "tech poster.png",
+      href: "/event/pixelpulse",
+    },
+    {
+      title: "Srijan Samvaad",
+      src: "talk.png",
+      href: "/event/Srijansamvaad",
+    },
+    {
+      title: "Info Graphica",
+      src: "./Visualization.png",
+      href: "/event/infographica",
+    },
+    {
+      title: "Vidhya Vrith",
+      src: "./Tech quiz.png",
+      href: "/event/vidhyavrith",
+    },
   ];
   //mechanical
   const cardcontent2 = [
     {
       title: "EngiNova",
-      src: "talent.jfif",
-      href: "/event/Mechnova",
+      src: "Model Showcase.png",
+      href: "/event/enginova",
     },
     {
       title: "Yantra Sangam",
-      src: "cosplay.jfif",
+      src: "Assembling Deassembling.png",
       href: "/event/Yantrasangam",
     },
     {
       title: "Kala Manthan",
-      src: "cosplay.jfif",
+      src: "Iron forging design.png",
       href: "/event/Kalamanthan",
     },
     {
       title: "CAD venture",
-      src: "cosplay.jfif",
+      src: "Cadventure.png",
       href: "/event/Cadventure",
     },
   ];
   //civil
-  const cardcontent3=[
-    { title: "Nal Neel ", src: "fashion-show.jpg", href: "/event/nalneel" },
+  const cardcontent3 = [
+    {
+      title: "Nal Neel ",
+      src: "Bridge Design.png",
+      href: "/event/nalneel"
+    },
     {
       title: "Re-Civilize",
-      src: "cosplay.jfif",
+      src: "Best out of waste.png",
       href: "/event/Recivilize",
     },
     {
       title: "Amrit Dhara",
-      src: "cosplay.jfif",
+      src: "Water Treatment.png",
       href: "/event/Amritdhara",
     },
   ];
   //Aerospace
 
-  const cardcontent4=[
+  const cardcontent4 = [
     {
       title: "Vimaan Shershtha",
-      src: "pirates.jfif",
+      src: "Fixed wing Rc plane.png",
       href: "/event/vimaanshershtha",
     },
     {
       title: "Ignition War",
-      src: "headscratch.jfif",
+      src: "Rocket Flying.png",
       href: "/event/ignitionwar",
     },
-    { title: "Vihangam", src: "robo race.jpg", href: "/event/vihangam" },
+    { title: "Vihangam", src: "Drone flying.png", href: "/event/vihangam" },
+    { title: "Dronovation", src: "19.png", href: "/event/dronovation" },
+    { title: "Naosat Pratyogita", src: "20.png", href: "/event/nanosatpratyogita" },
+
   ];
   //ECE Department
-  const cardcontent5=[
+  const cardcontent5 = [
     {
       title: "Mech War",
-      src: "engineerlife.jfif",
+      src: "Robo race.png",
       href: "/event/mechwar",
     },
   ];
   //physics
-  const cardcontent6 =[
-    
+  const cardcontent6 = [
+
     {
       title: "Prathirupan Dristikon",
-      src: "innovateindia.jfif",
+      src: "Model Presentation.png",
       href: "/event/prathirupandristikon",
     },
   ];
@@ -145,14 +156,14 @@ export default function Home() {
           muted
           playsInline
           className="absolute top-0 left-0 w-full h-auto"
-          style={{objectFit:"contain"}}
+          style={{ objectFit: "contain" }}
         >
           <source src="/bgudgaman.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
         {/* Foreground Content */}
-        
+
       </div>
 
 
@@ -182,7 +193,7 @@ export default function Home() {
         </div>
         <div className=" mb-5 lg:p-12 flex-1">
           <img
-            className="md:w-[30vw]  mx-auto w-[80%] sm:w-[80vw] border-[#eee] shadow-xl border-2 rounded-3xl bg-blue-200"
+            className="md:w-[30vw] h-[70vh]  mx-auto w-[80%] sm:w-[80vw] border-[#eee] shadow-xl border-2 rounded-3xl bg-blue-200"
             src="./deansir.png"
             alt="picture"
           />
@@ -202,7 +213,7 @@ export default function Home() {
             return <p className="text-lg text-justify lg:px-10 px-5">{item}</p>;
             })} */}
             <p className="text-lg text-justify lg:px-10 px-5">
-            Welcome to Udgaman, the premier Tech Fest of 2025 at Uttaranchal Institute of Technology, where innovation meets elevation. Organized by the esteemed Core Committee UIT, Udgaman is a celebration of technology, creativity, and ingenuity. This dynamic platform bridges the gap between inspiration and action, bringing together bright minds, cutting-edge ideas, and unparalleled opportunities. With a legacy of managing exceptional events, the Core Committee ensures every aspect of Udgaman is crafted to perfection, delivering an unforgettable experience. Embark on this exhilarating journey of technological exploration and elevate your aspirations to new heights.
+              Welcome to Udgaman, the premier Tech Fest of 2025 at Uttaranchal Institute of Technology, where innovation meets elevation. Organized by the esteemed Core Committee UIT, Udgaman is a celebration of technology, creativity, and ingenuity. This dynamic platform bridges the gap between inspiration and action, bringing together bright minds, cutting-edge ideas, and unparalleled opportunities. With a legacy of managing exceptional events, the Core Committee ensures every aspect of Udgaman is crafted to perfection, delivering an unforgettable experience. Embark on this exhilarating journey of technological exploration and elevate your aspirations to new heights.
               <br />
               <br />
               Join us in shaping the future!
@@ -211,6 +222,33 @@ export default function Home() {
           <div className="flex justify-center flex-1">
             <img src={"groupPhoto.JPG"} alt="groupPhoto.JPG" />
           </div>
+        </div>
+      </div>
+      {/*Photos from cc*/}
+      <div style={{ backgroundColor: "#f0f0f6" }}>
+        <div className="flex justify-center items-center">
+          <ImageBox src="/chancellorsir.jpg" title="Cheif Patron" name="Shri Jitender Joshi" pos="President" />
+          <ImageBox src="/vc.jpg" title="Co-Cheif Patron" name="Ms. Ankita Joshi" pos="Vice President" />
+        </div>
+        <div className="flex flex-col gap-4 bg-slate-200 p-3">
+          <h1 className="font-bold text-3xl text-center">Patron </h1>
+          <div className="flex justify-center items-center">
+            <ImageBox src="/faculity-3.jpg" name="Prof. Dharam Buddhi" pos="Vice Chancellor" />
+            <ImageBox src="/homebg.png" name="Prof. Rajesh Bahuguna" pos="Pro Vice Chancellor" />
+            <ImageBox src="/directorr.png" name="Dr. Abhishek Joshi" pos="Executive Director" />
+          </div>
+        </div>
+        <div className="flex justify-center items-center">
+          <ImageBox src="/deansir.jpg" title="Conveneyer" name="Dr. Sumit Choudhary" pos="Director,UIT" />
+          <ImageBox src="/hodmam.jpg" title="Co-Conveneyer" name="Mrs. Madhu Kirola" pos="HOD,UIT" />
+        </div>
+      </div>
+
+
+      <div className="flex flex-col gap-4 bg-slate-200 p-3">
+        <div className="flex justify-center items-center">
+          <ImageBox src="/mohitsir.jpg" name="Prof. Mohit Kumar" pos="Faculty Coordinator" />
+          <ImageBox src="/studco.jpg" name="Ishu Mishra" pos="Student Coordinator" />
         </div>
       </div>
 
@@ -236,7 +274,7 @@ export default function Home() {
           Epic Events
         </div>
         {/* Events Cards */}
-        <hr/>
+        <hr />
         <h1 className="text-white text-center font-bold text-4xl m-5">Gaming</h1>
         <div className="flex p-5 lg:p-10 flex-wrap gap-5 justify-center ">
           {gamingContent.map((item) => {
@@ -247,7 +285,7 @@ export default function Home() {
             );
           })}
         </div>
-          <hr/>
+        <hr />
         <h1 className="text-white text-center font-bold text-4xl m-5">CSE Department</h1>
         <div className="flex p-5 lg:p-10 flex-wrap gap-5 justify-center ">
           {cardcontent1.map((item) => {
@@ -258,7 +296,7 @@ export default function Home() {
             );
           })}
         </div>
-        <hr/>
+        <hr />
         <h1 className="text-white text-center font-bold text-4xl m-5">Mechanical Department</h1>
         <div className="flex p-5 lg:p-10 flex-wrap gap-5 justify-center ">
           {cardcontent2.map((item) => {
@@ -271,7 +309,7 @@ export default function Home() {
         </div>
 
 
-        <hr/>
+        <hr />
         <h1 className="text-white text-center font-bold text-4xl m-5">Civil Department</h1>
         <div className="flex p-5 lg:p-10 flex-wrap gap-5 justify-center ">
           {cardcontent3.map((item) => {
@@ -283,7 +321,7 @@ export default function Home() {
           })}
         </div>
 
-        <hr/>
+        <hr />
         <h1 className="text-white text-center font-bold text-4xl m-5">Aerospace Department</h1>
         <div className="flex p-5 lg:p-10 flex-wrap gap-5 justify-center ">
           {cardcontent4.map((item) => {
@@ -294,7 +332,7 @@ export default function Home() {
             );
           })}
         </div>
-        <hr/>
+        <hr />
         <h1 className="text-white text-center font-bold text-4xl m-5">ECE Department</h1>
         <div className="flex p-5 lg:p-10 flex-wrap gap-5 justify-center ">
           {cardcontent5.map((item) => {
@@ -305,7 +343,7 @@ export default function Home() {
             );
           })}
         </div>
-        <hr/>
+        <hr />
         <h1 className="text-white text-center font-bold text-4xl m-5">Physics Department</h1>
         <div className="flex p-5 lg:p-10 flex-wrap gap-5 justify-center ">
           {cardcontent6.map((item) => {
@@ -333,15 +371,36 @@ export default function Home() {
           })}
         </div>
       </div>
+      {/* event photos */}
+      <div className="p-4" style={{ backgroundColor: "#f0f0f6" }}>
+        <h1 className="font-bold text-5xl text-center m-3">Gallery</h1>
+        <div className="flex justify-center items-center">
+          <div className="bg-gray-50 border border-gray-300 rounded-lg shadow-md m-5 p-5 w-[40vw] ml-12 mb-12">
+            <Image
+              src="/event1.jpg"
+              alt="Event"
+              width={300}
+              height={300}
+              className="object-cover rounded-lg w-[50vw] h-[50vh] shadow-sm"
+            />
+          </div>
+        </div>
+        <div className="flex justify-center items-center">
+            <ImageBox src="/event2.jpg"/>
+            <ImageBox src="/event3.jpg"/>
+            <ImageBox src="/event4.jpg"/>
+            <ImageBox src="/event5.jpg"/>
 
+          </div>
+      </div>
       {/* ------- Numbers ------- */}
       <div className="py-20 flex items-center justify-around bg-white flex-col lg:flex-row gap-y-10">
         <div className="flex flex-col items-center justify-center">
-          <div className="text-blue-700 font-semibold text-4xl">3000+</div>
+          <div className="text-blue-700 font-semibold text-4xl">4000+</div>
           <div className="font-semibold text-3xl"> Participants</div>
         </div>
         <div className="flex flex-col items-center justify-center">
-          <div className="text-blue-700 font-semibold text-4xl">10+</div>
+          <div className="text-blue-700 font-semibold text-4xl">20+</div>
           <div className="font-semibold text-3xl"> Exciting Events</div>
         </div>
         <div className="flex flex-col items-center justify-center">
@@ -380,9 +439,9 @@ export default function Home() {
           <div>
             {/* {" "} */}
             <img
-              src="followus.jfif"
+              src="followus.png"
               alt="Image"
-              className="w-[100%] rounded-xl"
+              className="w-[100%] h-[60vh] rounded-xl"
             />
           </div>
         </div>

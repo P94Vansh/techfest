@@ -77,7 +77,7 @@ const Eventspage = ({
           </ul>
         </div>
       </div>
-      <div className="md:flex justify-center">
+      <div className="md:flex p-7 justify-center">
         <div className="flex-[3]">
           <div className="p-7 text-2xl font-semibold">Judging Criteria</div>
           <div className="p-7 pt-1 font-sans text-xl text-justify">
@@ -86,12 +86,14 @@ const Eventspage = ({
             ))}
           </div>
         </div>
+        <div>
         <div className="flex-[2]">
           <div className="p-7 text-2xl font-semibold">Faculty Coordinator</div>
           <div className="p-7 pt-1 font-sans text-xl">
-            {facultyCod.map((item, i) => (
-              <p key={i}>{item}</p>
-            ))}
+          {facultyCod[0]}{" "}
+            <a className="font-semibold" href={`tel:${facultyCod[1]}`}>
+              {facultyCod[1]}
+            </a>
           </div>
         </div>
         <div className="flex-[2]">
@@ -102,6 +104,7 @@ const Eventspage = ({
               {studentCod[1]}
             </a>
           </div>
+        </div>
         </div>
       </div>
       <div className="md:flex justify-center">

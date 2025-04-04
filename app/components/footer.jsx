@@ -25,8 +25,21 @@ const footer = () => {
           </div>
           <div className="text-[#888]">(B.TECH CSE 3rd year)</div>
         </div>
+        
+
+        <div className="text-center text-xl mt-8 text-blue-500 ">
+          For any Technical Issues Contact:
+        </div>
+        <div className="md:flex-row mt-2 flex flex-col md:gap-3 justify-center items-center">
+          <div className="text-white text-center text-lg  flex flex-col lg:flex-row ">
+          Vansh Gambhir <div className="px-3 cursor-pointer" onClick={()=>window.location.href="tel:+919193373770"}>- 8979402739 - </div>
+          </div>
+        </div>
+
+
+
         <div className="text-white text-center mt-8 text-sm pb-2">
-          &copy; 2024 Engineers Day. All rights reserved.
+          &copy; 2025 Tech Fest. All rights reserved.
         </div>
 
         <div className="md:text-md mt-3 pb-2 text-white text-center font-light font-md  ">
