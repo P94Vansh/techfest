@@ -372,17 +372,10 @@ export default function Home() {
       {/* event photos */}
       <div className="p-4" style={{ backgroundColor: "#f0f0f6" }}>
         <h1 className="font-bold text-5xl text-center m-3">Gallery</h1>
-        <div className="flex justify-center items-center">
-          <div className= " flex justify-center items-center bg-gray-50 border border-gray-300 rounded-lg shadow-md m-5 p-5 md:w-[40vw] w-[100vw] ml-12 mb-12">
-            <Image
-              src="/event1.JPG"
-              alt="Event"
-              width={300}
-              height={300}
-              className="md:object-contain md:rounded-lg md:w-[50vw] md:h-[50vh] md:shadow-sm  w-[50vw] h-[40vh] shadow-sm object-contain rounded-lg"
-            />
+        <div className="flex md:flex-row flex-col justify-center items-center">
+            <ImageBoxEv src="/event1.JPG"/>
+
           </div>
-        </div>
         <div className="flex md:flex-row flex-col justify-center items-center">
             <ImageBoxEv src="/event2.JPG"/>
             <ImageBoxEv src="/event3.JPG"/>
