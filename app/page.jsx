@@ -148,14 +148,12 @@ export default function Home() {
   return (
     <>
       {/* Background Video Section */}
-      <div className="relative w-full h-screen bg-[#112] flex items-center justify-center overflow-hidden">
         {/* Background Video */}
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute top-0 left-0 w-full h-auto"
           style={{ objectFit: "contain" }}
         >
           <source src="/bgudgaman.mp4" type="video/mp4" />
@@ -164,7 +162,6 @@ export default function Home() {
 
         {/* Foreground Content */}
 
-      </div>
 
 
       {/* ----------  DETAILS ------------ */}
@@ -193,8 +190,8 @@ export default function Home() {
         </div>
         <div className=" mb-5 lg:p-12 flex-1">
           <img
-            className="md:w-[30vw] h-[70vh]  mx-auto w-[80%] sm:w-[80vw] border-[#eee] shadow-xl border-2 rounded-3xl bg-blue-200"
-            src="./deansir.png"
+            className="md:w-[30vw] md:h-[70vh] h-[50vh] mx-auto w-[80%]  sm:w-[80vw] border-[#eee] shadow-xl border-2 rounded-3xl bg-blue-200"
+            src="./deansir.JPG"
             alt="picture"
           />
         </div>
@@ -203,7 +200,7 @@ export default function Home() {
       {/* ---------- Who are we ---------- */}
 
       <div className="flex flex-col justify-center py-10">
-        <div className="font-bold text-center  my-3 text-5xl font-sans">
+        <div className="font-bold text-center  my-3 md:text-5xl text-3xl font-sans">
           About Udgaman
         </div>
         <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-3">
@@ -219,26 +216,26 @@ export default function Home() {
               Join us in shaping the future!
             </p>
           </div>
-          <div className="flex justify-center flex-1">
+          <div className="flex justify-center flex-1 p-2">
             <img src={"groupPhoto.JPG"} alt="groupPhoto.JPG" />
           </div>
         </div>
       </div>
       {/*Photos from cc*/}
       <div style={{ backgroundColor: "#f0f0f6" }}>
-        <div className="flex justify-center items-center">
-          <ImageBox src="/chancellorsir.jpg" title="Cheif Patron" name="Shri Jitender Joshi" pos="President" />
-          <ImageBox src="/vc.jpg" title="Co-Cheif Patron" name="Ms. Ankita Joshi" pos="Vice President" />
+        <div className="flex md:flex-row flex-col justify-center items-center">
+          <ImageBox src="/chancellorsir.jpg" title="Cheif Patron" name="Shri Jitender Joshi" pos="President,UU" />
+          <ImageBox src="/vc.jpg" title="Co-Cheif Patron" name="Ms. Ankita Joshi" pos="Vice President,UU" />
         </div>
         <div className="flex flex-col gap-4 bg-slate-200 p-3">
           <h1 className="font-bold text-3xl text-center">Patron </h1>
-          <div className="flex justify-center items-center">
-            <ImageBox src="/faculity-3.jpg" name="Prof. Dharam Buddhi" pos="Vice Chancellor" />
-            <ImageBox src="/homebg.png" name="Prof. Rajesh Bahuguna" pos="Pro Vice Chancellor" />
-            <ImageBox src="/directorr.png" name="Dr. Abhishek Joshi" pos="Executive Director" />
+          <div className="flex md:flex-row flex-col justify-center items-center">
+            <ImageBox src="/faculity-3.jpg" name="Prof. Dharam Buddhi" pos="Vice Chancellor,UU" />
+            <ImageBox src="/homebg.png" name="Prof. Rajesh Bahuguna" pos="Pro Vice Chancellor,UU" />
+            <ImageBox src="/directorr.png" name="Dr. Abhishek Joshi" pos="Executive Director,UU" />
           </div>
         </div>
-        <div className="flex justify-center items-center">
+        <div className="flex flex-col md:flex-row justify-center items-center">
           <ImageBox src="/deansir.jpg" title="Conveneyer" name="Dr. Sumit Choudhary" pos="Director,UIT" />
           <ImageBox src="/hodmam.jpg" title="Co-Conveneyer" name="Mrs. Madhu Kirola" pos="HOD,UIT" />
         </div>
@@ -246,9 +243,9 @@ export default function Home() {
 
 
       <div className="flex flex-col gap-4 bg-slate-200 p-3">
-        <div className="flex justify-center items-center">
-          <ImageBox src="/mohitsir.jpg" name="Prof. Mohit Kumar" pos="Faculty Coordinator" />
-          <ImageBox src="/studco.jpg" name="Ishu Mishra" pos="Student Coordinator" />
+        <div className="flex md:flex-row flex-col justify-center items-center">
+          <ImageBox src="/mohitsir.jpg" title="Faculty Coordinator" name="Mr. Mohit Kumar" pos="Assistant Professor" />
+          <ImageBox src="/studco.jpg" title="Student President" name="Ishu Mishra" pos="B.Tech(CSE) 3rd year" />
         </div>
       </div>
 
@@ -259,7 +256,7 @@ export default function Home() {
           style={{ backgroundColor: "#D0CDD7" }}
           className=" p-14 rounded-2xl w-[80%] mx-auto flex gap-8 flex-col items-center justify-center"
         >
-          <div className="font-bold text-3xl md:text-4xl">
+          <div className="font-bold text-center text-3xl md:text-4xl">
             {/* Don&apos;t Miss Out on the Fun! */}
             Don&apos;t miss out on all the Fun !
           </div>
@@ -375,17 +372,17 @@ export default function Home() {
       <div className="p-4" style={{ backgroundColor: "#f0f0f6" }}>
         <h1 className="font-bold text-5xl text-center m-3">Gallery</h1>
         <div className="flex justify-center items-center">
-          <div className="bg-gray-50 border border-gray-300 rounded-lg shadow-md m-5 p-5 w-[40vw] ml-12 mb-12">
+          <div className="bg-gray-50 border border-gray-300 rounded-lg shadow-md m-5 p-5 md:w-[40vw] w-[100vw] ml-12 mb-12">
             <Image
               src="/event1.JPG"
               alt="Event"
               width={300}
               height={300}
-              className="object-cover rounded-lg w-[50vw] h-[50vh] shadow-sm"
+              className="object-cover rounded-lg md:w-[50vw] md:h-[50vh] w-[95vw] h-[60vh] shadow-sm"
             />
           </div>
         </div>
-        <div className="flex justify-center items-center">
+        <div className="flex md:flex-row flex-col justify-center items-center">
             <ImageBox src="/event2.JPG"/>
             <ImageBox src="/event3.JPG"/>
             <ImageBox src="/event4.JPG"/>
