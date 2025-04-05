@@ -185,9 +185,7 @@ export default function Page({ params }) {
       ],
     ],
     [
-      [
-        "Theme: Technology-related, original posters highlighting innovations or trends.",
-      ],
+      
       [
         "Theme: Technology-related, original posters highlighting innovations or trends.",
       ],
@@ -752,7 +750,7 @@ export default function Page({ params }) {
     ["Hydrophilia", "Water Treatment Stimulation"],
     //aero
     ["VIMAAN SHRESHTHA ", "RC Plane Competition"],
-    ["Ignition War", "Rocket Launching"], // Fixed improper nesting
+    ["Ignition War", "Flame Testing"], // Fixed improper nesting
     ["VIHANGAM", "Drone Racing"],
     ["Dronovation","Desing of Drones and RC Plane"],
     ["NanoSat Pratiyogita","CubeSat Competition"],
