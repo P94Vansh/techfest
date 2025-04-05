@@ -372,7 +372,7 @@ export default function Home() {
       <div className="p-4" style={{ backgroundColor: "#f0f0f6" }}>
         <h1 className="font-bold text-5xl text-center m-3">Gallery</h1>
         <div className="flex justify-center items-center">
-          <div className="bg-gray-50 border border-gray-300 rounded-lg shadow-md m-5 p-5 md:w-[40vw] w-[100vw] ml-12 mb-12">
+          <div className= " flex justify-center items-center bg-gray-50 border border-gray-300 rounded-lg shadow-md m-5 p-5 md:w-[40vw] w-[100vw] ml-12 mb-12">
             <Image
               src="/event1.JPG"
               alt="Event"
