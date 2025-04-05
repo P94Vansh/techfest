@@ -191,7 +191,7 @@ export default function Home() {
         <div className=" mb-5 lg:p-12 flex-1">
           <img
             className="md:w-[30vw] md:h-[70vh] h-[50vh] mx-auto w-[80%]  sm:w-[80vw] border-[#eee] shadow-xl border-2 rounded-3xl bg-blue-200"
-            src="./deansir.JPG"
+            src="./deansir.jpg"
             alt="picture"
           />
         </div>
