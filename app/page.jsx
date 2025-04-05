@@ -190,7 +190,7 @@ export default function Home() {
         </div>
         <div className=" mb-5 lg:p-12 flex-1">
           <img
-            className="md:w-[30vw] md:h-[70vh] h-[50vh] mx-auto w-[80%]  sm:w-[80vw] border-[#eee] shadow-xl border-2 rounded-3xl bg-blue-200"
+            className="md:w-[30vw] md:h-[70vh] h-[30vh] mx-auto w-[90%]  sm:w-[80vw] border-[#eee] shadow-xl border-2 rounded-3xl bg-blue-200"
             src="./deansir.jpg"
             alt="picture"
           />
@@ -378,7 +378,7 @@ export default function Home() {
               alt="Event"
               width={300}
               height={300}
-              className="object-cover rounded-lg md:w-[50vw] md:h-[50vh] w-[95vw] h-[60vh] shadow-sm"
+              className="md:object-cover md:rounded-lg md:w-[50vw] md:h-[50vh] md:shadow-sm  w-[50vw] h-[40vh] shadow-sm object-cover rounded-lg"
             />
           </div>
         </div>
