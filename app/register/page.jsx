@@ -56,7 +56,7 @@ export default function Register() {
           case "success":
             setInfoTheme("success");
             setInfoText(`Form Submitted Successfully...
-              Our Team will contact you Shortly through the provided Mail... Please keep Checking the spam folder of provided email`);
+              Our Team will contact you Shortly through the provided Mail... Please keep Checking the spam folder of provided email as well`);
             break;
           case "error":
             setInfoTheme("error");
