@@ -10,25 +10,28 @@ export default function Register() {
   const [infoText, setInfoText] = useState(" * fields are required");
   const [submitDisabled, setSubmitDisabled] = useState(false);
   const fees=[
-  {"Vijay Ghosh":250},
+  {"Vijay Ghosh":500},
   {"Code Storm":1000},
   {"Simu Hire":150},
-  {"Pixel Pulse":10},
-  {"Srijan Samvaad":10},
+  {"Pixel Pulse":150},
+  {"Srijan Samvaad":400},
   {"Info Graphica":400},
-  {"Vidya Vrith":200},
-  {"EngiNova":10},
-  {"Yantra Sangam":10},
-  {"Kala Manthan":10},
-  {"CAD venture":10},
-  {"Nal Neel":10},
-  {"Re civilize":110},
-  {"Amrit Dhara":10},
-  {"Vimaan Shreshtha":10},
-  {"Ignition War":10},
-  {"Vihangam":10},
-  {"Mech War":10},
-  {"Prathirupan Dristikon":10}
+  {"Vidya Vrith":300},
+  {"EngiNova":1000},
+  {"Yantra Sangam":250},
+  {"Kala Manthan":1000},
+  {"CAD venture":500},
+  {"Nal Neel":500},
+  {"Re civilize":500},
+  {"HydroPhilia":500},
+  {"Vimaan Shreshtha":1000},
+  {"Ignition War":200},
+  {"Vihangam":1500},
+  {"Mech War":1000},
+  {"SciLife":500},
+  {"DronoVation":200},
+  {"NanoSat Pratiyogita":300},
+
   ]
   const [formData, setFormData] = useState({ transition_amount: 0});
   const onSubmit = async (e) => {
@@ -97,6 +100,8 @@ export default function Register() {
         className="bg-blur w-[95%] mx-auto md:w-[600px] flex flex-col bg-[rgba(255,255,255,0.1)] px-5 lg:px-10 rounded-3xl border border-gray-500"
       >
         <h1 className="text-center text-2xl md:4xl py-10">
+          <div className="text-slate-100">*Note:- Only fill out the details of the team leader and fill the details carefully, we will contact the team leader through provided Email.</div>
+          <br/>
           <span className="text-gray-400">Registration Form</span>
         </h1>
         {/* Team Name - Leader */}
@@ -155,7 +160,7 @@ export default function Register() {
           <Select
             label={"College Name"}
             name={"college"}
-            options={["GEU", "DIT", "UPES","IMS","Shivalik","BFIT","UTU","Tula's","Doon University","Jigyasa University"]}
+            options={["UU","GEU", "DIT", "UPES","IMS","Shivalik","BFIT","UTU","Tula's","Doon University","Jigyasa University"]}
             className={"flex-1"}
             onChange={handleInput}
             value={formData["college"]}
@@ -217,7 +222,7 @@ export default function Register() {
         <div className="flex flex-col mt-2">
           {formData["event"]  && (
             <>
-              <div className="mb-2">Scan this QR and Upload the Screenshot</div>
+              <div className="mb-2">Scan this QR and Submit the transaction Id</div>
               <img
                 src="/payment-qr.jpg"
                 className="w-full md:w-[50%] mx-auto rounded"
@@ -266,10 +271,12 @@ const events = [
   "CAD venture",
   "Nal Neel",
   "Re civilize",
-  "Amrit Dhara",
+  "HydroPhilia",
   "Vimaan Shreshtha",
   "Ignition War",
   "Vihangam",
   "Mech War",
-  "Prathirupan Dristikon"
+  "SciLife",
+  "DronoVation",
+  "NanoSat Pratiyogita"
 ];
