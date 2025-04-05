@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import ImageBox from "./components/box";
+import ImageBoxEv from "./components/eventbox"
 import Card from "./components/Card";
 import { useRef } from "react";
 import Faq from "./components/faq";
@@ -79,7 +80,7 @@ export default function Home() {
       href: "/event/Recivilize",
     },
     {
-      title: "Amrit Dhara",
+      title: "Hydrophilia",
       src: "Water Treatment.png",
       href: "/event/Amritdhara",
     },
@@ -114,7 +115,7 @@ export default function Home() {
   const cardcontent6 = [
 
     {
-      title: "Prathirupan Dristikon",
+      title: "SciLife",
       src: "Model Presentation.png",
       href: "/event/prathirupandristikon",
     },
@@ -167,7 +168,7 @@ export default function Home() {
       {/* ----------  DETAILS ------------ */}
 
       <div
-        className="md:flex-row sm:flex-row flex flex-col-reverse items-center justify-center text-justify py-7"
+        className="md:flex-row flex flex-col-reverse items-center justify-center text-justify py-7"
         style={{ backgroundColor: "#f0f0f6" }}
       >
         <div className="flex flex-col gap-5 flex-1">
@@ -224,8 +225,8 @@ export default function Home() {
       {/*Photos from cc*/}
       <div style={{ backgroundColor: "#f0f0f6" }}>
         <div className="flex md:flex-row flex-col justify-center items-center">
-          <ImageBox src="/chancellorsir.jpg" title="Cheif Patron" name="Shri Jitender Joshi" pos="President,UU" />
-          <ImageBox src="/vc.jpg" title="Co-Cheif Patron" name="Ms. Ankita Joshi" pos="Vice President,UU" />
+          <ImageBox src="/chancellorsir.jpg" title="Chief Patron" name="Shri Jitender Joshi" pos="President,UU" />
+          <ImageBox src="/vc.jpg" title="Co-Chief Patron" name="Ms. Ankita Joshi" pos="Vice President,UU" />
         </div>
         <div className="flex flex-col gap-4 bg-slate-200 p-3">
           <h1 className="font-bold text-3xl text-center">Patron </h1>
@@ -236,8 +237,8 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center">
-          <ImageBox src="/deansir.jpg" title="Conveneyer" name="Dr. Sumit Choudhary" pos="Director,UIT" />
-          <ImageBox src="/hodmam.jpg" title="Co-Conveneyer" name="Mrs. Madhu Kirola" pos="HOD,UIT" />
+          <ImageBox src="/deansir.jpg" title="Conveneyer" name="Prof. Dr. Sumit Chaudhary" pos="Director,UIT" />
+          <ImageBox src="/hodmam.jpg" title="Co-Conveneyer" name="Dr. Madhu Kirola" pos="HOD,UIT(CSE)" />
         </div>
       </div>
 
@@ -378,15 +379,18 @@ export default function Home() {
               alt="Event"
               width={300}
               height={300}
-              className="md:object-cover md:rounded-lg md:w-[50vw] md:h-[50vh] md:shadow-sm  w-[50vw] h-[40vh] shadow-sm object-cover rounded-lg"
+              className="md:object-contain md:rounded-lg md:w-[50vw] md:h-[50vh] md:shadow-sm  w-[50vw] h-[40vh] shadow-sm object-contain rounded-lg"
             />
           </div>
         </div>
         <div className="flex md:flex-row flex-col justify-center items-center">
-            <ImageBox src="/event2.JPG"/>
-            <ImageBox src="/event3.JPG"/>
-            <ImageBox src="/event4.JPG"/>
-            <ImageBox src="/event5.JPG"/>
+            <ImageBoxEv src="/event2.JPG"/>
+            <ImageBoxEv src="/event3.JPG"/>
+
+          </div>
+        <div className="flex md:flex-row flex-col justify-center items-center">
+            <ImageBoxEv src="/event4.JPG"/>
+            <ImageBoxEv src="/event5.JPG"/>
 
           </div>
       </div>

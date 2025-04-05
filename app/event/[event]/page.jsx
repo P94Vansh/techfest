@@ -224,21 +224,28 @@ export default function Page({ params }) {
     ],
     [
       [
-        "Boat Type",
-        "Participants must build a small boat that can float and navigate through a water course",
+        "Time Limit: 90 Minutes"
       ],
       [
-        "Materials",
-        "Teams must construct their boats using their own materials",
+        "Attendees are required to report 30 minutes prior to the Event"
       ],
       [
-        "Rules",
-        "Boats can be either powered by manual (e.g., wind, hand propulsion) or motorized means",
+        "Everyone should carry their valid college ID cards"
       ],
       [
-        "Disqualification",
-        "The size of the boat must not exceed by 1 foot otherwise will lead to disqualification",
+        "Internet Usage is not allowed during the event"
       ],
+      ["All the Participants will be provided systems and data for the Event"],
+      ["Open to Individuals or Teams(max. 4 members)"],
+      ["All University Students (Any stream or year) are allowed to take participation"],
+      ["Participants must register before the deadline"],
+      [
+        "Participants will be provided with the dataset at the start of the competition"
+      ],
+      [
+        "They must analyse the data and create an insightful, clear and visually appealing visualization"
+      ],
+      ["Visualizations must be created using Pythong language or jupiter Notebook"]
     ],
     [
       ["Open to all B.Tech students"],
@@ -491,11 +498,11 @@ export default function Page({ params }) {
       "•	Interactivity (10%) – Bonus points for interactive visualizations.",
     ],
     [
-      "Speed & Time",
-      "Stability",
-      "Design",
-      "Strategy & Tactics",
-      "The boat's ability to complete the course",
+      "Clarity & Insight (30%)",
+      "Creativity & Innovation (20%)",
+      "Aesthetic Appeal (20%)",
+      "Technical Accuracy (20%)",
+      "Interactivity(10%)",
     ],
     [
       "based on your performance in the quiz rounds, including the preliminary, semi-final, and final rounds.",
@@ -644,7 +651,7 @@ export default function Page({ params }) {
 
     //aero
     ["Deepak Arya", 9528352531],
-    ["Gauri Rana", 6200289570],
+    ["Gouri Rani", 6200289570],
     ["Ujjwal Rana", 9560548456],
     ["Prateek Bhatt",7498496672],
     ["Abhay Dhasmana",7417075478],
@@ -742,7 +749,7 @@ export default function Page({ params }) {
     //civil
     ["nalneel", "Bridge Design Challenge"],
     ["RE-CIVILIZED", "Best Out of Waste"],
-    ["Amrit Dhara", "Water Treatment Stimulation"],
+    ["Hydrophilia", "Water Treatment Stimulation"],
     //aero
     ["VIMAAN SHRESHTHA ", "RC Plane Competition"],
     ["Ignition War", "Rocket Launching"], // Fixed improper nesting
@@ -752,7 +759,7 @@ export default function Page({ params }) {
     //ece
     ["MECH WAR ", "E-ROBO WAR"],
     //phy
-    ["PRATIRUPAN DRISTIKON ", "Model Presentation on Science in Everyday Life"],
+    ["SCILIFE ", "Model Presentation on Science in Everyday Life"],
   ];
   return (
     <Eventspage
