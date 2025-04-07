@@ -237,8 +237,8 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center">
-          <ImageBox src="/deansir.jpg" title="Conveneyer" name="Prof. Dr. Sumit Chaudhary" pos="Director,UIT" />
-          <ImageBox src="/hodmam.jpg" title="Co-Conveneyer" name="Dr. Madhu Kirola" pos="HOD,UIT(CSE)" />
+          <ImageBox src="/deansir.jpg" title="Convener" name="Prof. (Dr.) Sumit Chaudhary" pos="Director,UIT" />
+          <ImageBox src="/hodmam.jpg" title="Co-Convener" name="Dr. Madhu Kirola" pos="HOD (CSE), UIT" />
         </div>
       </div>
 

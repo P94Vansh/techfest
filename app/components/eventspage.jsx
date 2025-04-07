@@ -11,6 +11,7 @@ const Eventspage = ({
   date,
   time,
   venue,
+  problemStatement
 }) => {
   //     eventguid = [
   //         ["Theme", "Open"],
@@ -24,6 +25,17 @@ const Eventspage = ({
   // date=" September 12th, 2024"
   // time="11:00 AM- 1:00 PM"
   // venue=" UIT Ground Floor"
+  const quizFormat = [
+    [["Preliminary Round (MCQ-Based)"], [["20 questions covering all tech domains."],
+    ["30 seconds per question."],
+    ["Top 8 teams advances."]]],
+    [["Semi-Final Round (Buzzer Round)"], [["Fast-paced buzzer-based competition."],
+    ["Negative marking for incorrect answers."],
+    ["Top 4 teams qualify for finals."]]],
+    [["Final Round (Rapid Fire & Situation-Based Questions)"], [["60 seconds to answer 5 questions."],
+    ["Some questions may involve real-world case studies."],
+    ["Highest scoring team wins."]]],
+  ]
   const backgroundImageStyle2 = {
     backgroundImage: `url("/bgimgtech.avif")`,
     backgroundSize: "cover", // Ensures the image covers the container
@@ -76,7 +88,88 @@ const Eventspage = ({
             ))}
           </ul>
         </div>
+        {title[1] == "Hackathon" && (
+          <div>
+            <div className="p-7 text-2xl font-semibold">Problem Statement</div>
+            <div className="pt-1 font-sans text-xl text-justify px-10 md:px-16">
+              <ul className="list-decimal">
+                {problemStatement.map((item, i) => (
+                  <li key={i}>
+                    {item[0]} {item[1] && ": "}
+                    {item[1] &&
+                      (Array.isArray(item[1]) ? (
+                        <ul className="list-disc">
+                          {item[1].map((value, i) => (
+                            <li key={i} className="ml-3">
+                              {value}
+                            </li>
+                          ))}
+                        </ul>
+                      ) : (
+                        item[1]
+                      ))}
+                  </li>
+                ))}
+                <li>You can also select any Problem Statement as per your convenience.</li>
+              </ul>
+            </div>
+          </div>
+        )}
+
+        {
+          title[1]=="Tech Quiz"&&(
+            <div>
+            <div className="p-7 text-2xl font-semibold">Quiz Format</div>
+            <div className="pt-1 font-sans text-xl text-justify px-10 md:px-16">
+              {quizFormat.map((item,i)=>(
+                <div key={i}>
+                <div className="p-7 text-xxl font-semibold">{item[0]}</div>
+                <div className="pt-1 font-sans text-xl text-justify px-10 md:px-16">
+                <ul className="list-decimal">
+                {item[1].map((item, i) => (
+                  <li key={i}>
+                    {item[0]} {item[1] && ": "}
+                    {item[1] &&
+                      (Array.isArray(item[1]) ? (
+                        <ul className="list-disc">
+                          {item[1].map((value, i) => (
+                            <li key={i} className="ml-3">
+                              {value}
+                            </li>
+                          ))}
+                        </ul>
+                      ) : (
+                        item[1]
+                      ))}
+                  </li>
+                ))}
+              </ul>
+                </div>
+                </div>
+              ))}
+            </div>
+          </div> 
+          )
+        }
+
+
+{title[0] == "SCILIFE" && (
+  <div>
+    <div className="p-7 text-2xl font-semibold">Categories</div>
+    <div className="p-7 pt-1 font-sans text-xl text-justify">
+      The event is divided into two categories:
+    </div>
+    <div className="pt-1 font-sans text-xl px-10 md:px-16">
+  <ol style={{ listStyleType: "decimal" }}>
+    <li>Working Model – A functional scientific demonstration.</li>
+    <li>Non-Working Model – A theoretical or static representation of a scientific concept.    </li>
+  </ol>
+</div>
+  </div>
+)}
+
       </div>
+
       <div className="md:flex p-7 justify-center">
         <div className="flex-[3]">
           <div className="p-7 text-2xl font-semibold">Judging Criteria</div>
@@ -87,24 +180,24 @@ const Eventspage = ({
           </div>
         </div>
         <div>
-        <div className="flex-[2]">
-          <div className="p-7 text-2xl font-semibold">Faculty Coordinator</div>
-          <div className="p-7 pt-1 font-sans text-xl">
-          {facultyCod[0]}{" "}
-            <a className="font-semibold" href={`tel:${facultyCod[1]}`}>
-              {facultyCod[1]}
-            </a>
+          <div className="flex-[2]">
+            <div className="p-7 text-2xl font-semibold">Faculty Coordinator</div>
+            <div className="p-7 pt-1 font-sans text-xl">
+              {facultyCod[0]}{" "}
+              <a className="font-semibold" href={`tel:${facultyCod[1]}`}>
+                {facultyCod[1]}
+              </a>
+            </div>
           </div>
-        </div>
-        <div className="flex-[2]">
-          <div className="p-7 text-2xl font-semibold">Student coordinator</div>
-          <div className="p-7 pt-1 font-sans text-xl">
-            {studentCod[0]}{" "}
-            <a className="font-semibold" href={`tel:${studentCod[1]}`}>
-              {studentCod[1]}
-            </a>
+          <div className="flex-[2]">
+            <div className="p-7 text-2xl font-semibold">Student coordinator</div>
+            <div className="p-7 pt-1 font-sans text-xl">
+              {studentCod[0]}{" "}
+              <a className="font-semibold" href={`tel:${studentCod[1]}`}>
+                {studentCod[1]}
+              </a>
+            </div>
           </div>
-        </div>
         </div>
       </div>
       <div className="md:flex justify-center">
@@ -128,11 +221,11 @@ const Eventspage = ({
 export default Eventspage;
 
 function Register({ title, registerHref }) {
-    return (
-      <Link href={registerHref}>
-        <button className="py-2 px-10  hover:bg-blue-700 hover:text-white transition text-blue-800 border-blue-700 border-2 rounded-full font-bold md:text-2xl">
-          Register Now!
-        </button>
-      </Link>
-    );
+  return (
+    <Link href={registerHref}>
+      <button className="py-2 px-10  hover:bg-blue-700 hover:text-white transition text-blue-800 border-blue-700 border-2 rounded-full font-bold md:text-2xl">
+        Register Now!
+      </button>
+    </Link>
+  );
 }

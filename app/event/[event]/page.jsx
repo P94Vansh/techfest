@@ -207,18 +207,20 @@ export default function Page({ params }) {
       ["Registration Fee ₹100 per participant."],
     ],
     [
-      ["The event is open to individuals or teams (max 4 members per team)."],
-      ["Open to all university students (any year or stream)."],
-      ["Participants must register before the deadline."],
-      ["Time limit: 90 minutes."],
+      ["Eligibility: Open to students from all institutions."],
+      ["Tech Talk: Individual participation only."],
+      ["Innovative India PPT: Solo or teams (maximum 2 members)."],
+      ["Participants must register before the deadline (Late entries will not be accepted)."],
       [
-        "Resources",
-        "The participants will be provided with VS Code as their IDE.",
+        "Tech Talk: 5-7 minutes speech + 2 minutes for Q&A.",
       ],
-      ["Reporting Time: Attendees must report 30 minutes before the event."],
-      ["Internet usage is not allowed during the competition."],
-      ["Internet usage is not allowed during the competition."],
-      ["Participants must carry their valid college ID cards."],
+      ["Innovative India PPT: 8-10 slides (max 10 minutes) + 3 minutes for Q&A."],
+      ["Language: Presentations must be in English or Hindi."],
+      ["Originality: All presentations must be new and unique. Plagiarism will result in disqualification."],
+      ["Participants should wear professional attire."],
+      ["Using projectors, clickers, and animations is allowed."],
+      ["Participants must treat each other with respect."],
+      ["Offensive language, visuals, or writing is prohibited."]
     ],
     [
       [
@@ -243,21 +245,14 @@ export default function Page({ params }) {
       [
         "They must analyse the data and create an insightful, clear and visually appealing visualization"
       ],
-      ["Visualizations must be created using Pythong language or jupiter Notebook"]
+      ["Visualizations must be created using Python language or jupiter Notebook"]
     ],
     [
-      ["Open to all B.Tech students"],
+      ["Open to all B.Tech students."],
+      ["Teams of 2-4 members (all from the same institution)."],
       ["No participant can be part of multiple teams."],
       ["The quizmaster’s decision is final."],
-      [
-        " 1.Preliminary Round (MCQ-Based):o	20 questions covering all tech domains.30 seconds per question.•	Preliminary Round: Correct (+4), Wrong (-1).",
-      ],
-      [
-        "2.	Semi-Final Round (Buzzer Round).Buzzer Round: Correct (+5), Wrong (-2)",
-      ],
-      ["Negative marking for incorrect answers."],
-      ["3.	Final Round (Rapid Fire & Situation-Based Questions)"],
-      ["registration fee: ₹200 per participant"],
+      ["Participants must carry a valid college ID."]
     ],
     //mech
     [
@@ -430,12 +425,78 @@ export default function Page({ params }) {
       ],
       [
         "Teams must submit a technical report detailing their bot’s design, components, and safety features."
+      ],
+      [
+        "Each team must consist of 3 to 6 members."
+      ],
+      [
+        "A designated Team Leader is responsible for official communication."
+      ],
+      [
+        "One or two members may operate the Mech-Bot during battles."
+      ],
+      [
+        "Maximum weight: 50 kg (or as per competition guidelines)."
+      ],
+      [
+        "Maximum dimensions: 1.2m x 1.2m x 1.5m (expandable in battle mode if permitted)."
+      ],
+      [
+        "Power sources can be electric, hydraulic, or pneumatic."
+      ],
+      [
+        "The bot must have a secure control system to prevent interference."
+      ],
+      [
+        "Autonomous Mech-Bots must have a manual override system for safety."
+      ],
+      [
+        "Cutting tools, flippers, hammers, spinning weapons, pneumatic/hydraulic arms."
+      ],
+      [
+        "Fire-based weapons, liquids, explosives, projectile launchers (bullets, darts, etc.), jamming devices."
+      ],
+      [
+        "Maximum weapon speed and force must comply with safety regulations."
+      ],
+      [
+        "Battles last 3 to 5 minutes or until one Mech-Bot is incapacitated."
+      ],
+      [
+        "Formats may include knockout rounds, points-based matcShes, or capture-the-flag challenges."
+      ],
+      [
+        "A Mech-Bot is KO’d (knocked out) if it is immobile for 30 seconds."
+      ],
+      [
+        "If time runs out, judges score based on damage inflicted, aggression, and control."
+      ],
+      [
+        "No intentional entanglement or jamming of enemy controls."
+      ],
+      [
+        "No attacks after the stop signal is given."
+      ],
+      [
+        "Teams must strictly follow referee instructions."
+      ],
+      [
+        "Each Mech-Bot must pass a pre-match safety check."
+      ],
+      [
+        "All team members must wear protective gear inside the arena."
+      ],
+      [
+        "Judges and referees hold the right to disqualify teams for any rule violations."
+      ],
+      [
+        "Mech-Bots must have an emergency shutdown feature for safety."
       ]
     ],
 
     [
       //phy
-      ["Each team must have a minimum of 2 participants."],
+      ["Each team must have a maximum of 5 participants."],
       [
         "Teams must display their project throughout the event; failure to do so may lead to disqualification.",
       ],
@@ -488,12 +549,18 @@ export default function Page({ params }) {
       "Final Decision: The judge’s decision is final and cannot be challenged.",
     ],
     [
-      "Submissions will be evaluated based on the following criteria:",
-      "Clarity & Insight (30%) – How well the visualization communicates insights.",
-      "Creativity & Innovation (20%) – Uniqueness and originality in visualization.",
-      "Aesthetic Appeal (20%) – Visual design, colour choices, and readability.",
-      "Technical Accuracy (20%) – Correct use of data and methodology.",
-      "•	Interactivity (10%) – Bonus points for interactive visualizations.",
+      "Tech Talk:",
+      " Participants will be judged based on:",
+      "Clarity – How well the topic is explained.",
+      " Engagement – How interactive and interesting the talk is.",
+      " Knowledge – Depth of research and expertise.",
+      " Delivery – Confidence, articulation, and body language.",
+      "Innovative India PPT:",
+      " Presentations will be evaluated on:",
+      " Creativity – How innovative the idea is.",
+      " Feasibility – Whether the solution can be implemented.",
+      "Impact – Potential benefits and effectiveness.",
+      " Presentation Skills – Clarity, structure, and delivery."
     ],
     [
       "Clarity & Insight (30%)",
@@ -503,7 +570,9 @@ export default function Page({ params }) {
       "Interactivity(10%)",
     ],
     [
-      "based on your performance in the quiz rounds, including the preliminary, semi-final, and final rounds.",
+      "Preliminary Round: Correct (+4), Wrong (-1).",
+      "Buzzer Round: Correct (+5), Wrong (-2).",
+      "Tie-breaker questions will be asked in case of a tie."
     ],
     [
       "Design & Innovation (40%) – Originality and creativity in the project.",
@@ -595,37 +664,40 @@ export default function Page({ params }) {
       "The explanation should be simple and free from excessive jargon to ensure accessibility for all age groups.",
       "Models should include visuals, diagrams, and real-life examples for better engagement.",
       "Live demonstrations or experiments are encouraged, provided they are conducted safely.",
+      "If the model involves experiments, it must be non-hazardous.",
+      "Proper safety guidelines must be followed for handling chemicals, electrical components, or heat sources",
+      "Any experiment requiring adult supervision must include necessary disclaimers."
     ],
   ];
   const facultyCod = [
     //gam
     ["Mr. Ankit Chamoli"],
     //cse
-    ["Mr. Mohit Kumar"],
-    ["Mr. Mohit Kumar"],
-    ["Mr. Mohit Kumar"],
-    ["Mr. Mohit Kumar"],
-    ["Mr. Mohit Kumar"],
-    ["Mr. Mohit Kumar"],
+    ["Mr. Aldrin Menon"],
+    ["Mr. Arpit Goyal"],
+    ["Mrs. Anuradha Brijwal"],
+    ["Asst. Prof. Mohit Kumar"],
+    ["Mr. Rohan Kumar"],
+    ["Mr. Gopal Krishna"],
     //mech
     ["Mr.Vivek John"],
-    ["Mr.Vivek John"],
-    ["Mr. Vivek John"],
-    ["Mr.Vivek John"],
+    ["Mr. Yashwant Singh Bisht"],
+    ["Mr. Saurabh Aggarwal"],
+    ["Mr.Alok Kumar"],
     //civil
     ["Mr. LokNath Kumar"],
-    ["Mr. Vivek John"],
-    ["Mr. Ashish Pathani"],
+    ["Mr. Vinod Balmiki"],
+    ["Asst. Prof. Ashish Pathani"],
     //aero
     ["Mr. Divij Arora"],
-    ["Ms. Amita Bisht"],
-    ["Ms. Roosha Shamoon"],
     ["Mr. Divij Arora"],
-    ["Mr.Divij Arora"],
+    ["Mr. Divij Arora"],
+    ["Ms. Priyanka Arun Kumar"],
+    ["Ms. Priyanka Arun Kumar"],
     //ece
-    ["Ms. Pooja Jain"],
+    ["Mr. Sunil Sharma"],
     //phy
-    ["deepak"],
+    ["Dr. Pooja Rawat"],
   ];
   const studentCod = [
     //game
@@ -639,13 +711,13 @@ export default function Page({ params }) {
     ["Rohit Arya", 7088929781],
     //mech
     ["Aryan Kumar", 8279684028],
-    ["Avneesh Pal", 8077499135],
+    ["Avaneesh Pal", 8077499135],
     ["Vivek Kumar", 7505708594],
     ["Vivek Kumar", 7505708594],
     //civil
     ["Shivam Raj Patel", 8409140698],
     ["Nishant Singh", 7857085450],
-    ["Rudraksha Sharma", 7303822434],
+    ["Rudraksh Sharma", 7303822434],
 
     //aero
     ["Deepak Arya", 9528352531],
@@ -657,7 +729,7 @@ export default function Page({ params }) {
     ["Bastav Dutta", 6900186459],
 
     //phy
-    ["Gaurav Yadav", 9968548565] // Duplicate name
+    ["Gourav Yadav", 9968548565] // Duplicate name
   ];
 
   const date = [
@@ -729,6 +801,23 @@ export default function Page({ params }) {
     "UIT",
     "UIT",
   ];
+  const problemStatement=[
+    ["Heart Disease Prediction","Predict the presence of heart disease using patient health metrics (e.g., cholesterol, blood pressure)."],
+    ["Fake News Detection","Classify news articles as fake or real using NLP techniques."],
+    ["Stock Price Forecasting","Predict future stock prices using time-series analysis."],
+    ["Customer Churn Prediction"," Predict if a customer will leave a telecom service."],
+    ["Image Classification (CIFAR-10)","Classify 10 categories of images (e.g., cars, birds)."],
+    ["Sentiment Analysis on Tweets","Classify tweets as positive, negative, or neutral."],
+    ["Diabetes Prediction","Predict diabetes risk using health indicators."],
+    ["Air Quality Prediction","Forecast air quality (e.g., CO levels) using sensor data."],
+    ["Credit Card Fraud Detection"," Identify fraudulent transactions (imbalanced dataset)."],
+    ["Movie Recommendation System","Build a collaborative filtering model to recommend movies."],
+    ["Traffic management","(smart signals, AI-based congestion control)"],
+    ["Waste management","(IoT-based smart bins, real-time collection tracking)"],
+    ["Smart water supply","(leakage detection, automated water distribution)"],
+    ["Renewable energy integration","(solar panels, automated street lights)"],
+    ["Disaster management system","(flood monitoring, earthquake response)"]
+  ]
   const title = [
     //game
     ["Vijay Ghosh", "BGMI"],
@@ -742,11 +831,11 @@ export default function Page({ params }) {
     //mech
     ["ENGINOVA ", "PROJECT SHOW "],
     ["Yantra sangam", "Assembly Disassembly"],
-    ["KALA MANTHAN ", "Metal Forging/ Food Design "],
+    ["KALA MANTHAN ", "Metal Forging/ Grind Design"],
     ["CADventure", "Computer Aided Design"],
     //civil
-    ["nalneel", "Bridge Design Challenge"],
-    ["RE-CIVILIZED", "Best Out of Waste"],
+    ["Nal Neel", "Bridge Design Challenge"],
+    ["RE-CIVILIZE", "Best Out of Waste"],
     ["Hydrophilia", "Water Treatment Stimulation"],
     //aero
     ["VIMAAN SHRESHTHA ", "RC Plane Competition"],
@@ -757,7 +846,7 @@ export default function Page({ params }) {
     //ece
     ["MECH WAR ", "E-ROBO WAR"],
     //phy
-    ["SCILIFE ", "Model Presentation on Science in Everyday Life"],
+    ["SCILIFE", "Model Presentation on Science in Everyday Life"],
   ];
   return (
     <Eventspage
@@ -770,6 +859,7 @@ export default function Page({ params }) {
       date={date[index]}
       time={time[index]}
       venue={venue[index]}
+      problemStatement={problemStatement}
     />
   );
 }
