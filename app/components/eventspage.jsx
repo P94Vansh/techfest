@@ -90,7 +90,7 @@ const Eventspage = ({
         </div>
         {title[1] == "Hackathon" && (
           <div>
-            <div className="p-7 text-2xl font-semibold">Problem Statement</div>
+            <div className="p-7 text-2xl font-semibold">Problem Statements:</div>
             <div className="pt-1 font-sans text-xl text-justify px-10 md:px-16">
               <ul className="list-decimal">
                 {problemStatement.map((item, i) => (
