@@ -617,7 +617,7 @@ export default function Page({ params }) {
     ["Mr. Vivek John"],
     ["Mr. Ashish Pathani"],
     //aero
-    ["Mr. Ashish Pathani"],
+    ["Mr. Divij Arora"],
     ["Ms. Amita Bisht"],
     ["Ms. Roosha Shamoon"],
     ["Mr. Divij Arora"],
