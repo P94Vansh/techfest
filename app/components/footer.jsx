@@ -43,7 +43,7 @@ const footer = () => {
         </div>
 
         <div className="md:text-md mt-3 pb-2 text-white text-center font-light font-md  ">
-          Site Created by: <br className="md:hidden" /> Vansh Gambhir, Deepak Kumar, Aryan Mishra
+          Site Created by: <br className="md:hidden" /> Vansh Gambhir, Deepak Kumar
         </div>
       </div>
     </div>
