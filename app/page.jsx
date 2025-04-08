@@ -165,7 +165,6 @@ export default function Home() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  console.log("Is Mobile:", isMobile);
   return (
     <>
       {/* Background Video Section */}
