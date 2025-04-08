@@ -165,24 +165,25 @@ export default function Home() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  console.log("Is Mobile:", isMobile);
   return (
     <>
       {/* Background Video Section */}
         {/* Background Video */}
         <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        style={{ objectFit: "contain" }}
-      >
-        <source
-          src={isMobile ? "/udgamanmobile.mp4" : "/bgudgaman.mp4"}
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video>
-
+  key={isMobile ? "mobile" : "desktop"} // Force re-render when isMobile changes
+  autoPlay
+  loop
+  muted
+  playsInline
+  style={{ objectFit: "contain" }}
+>
+  <source
+    src={isMobile ? "/udgamanmobile.mp4" : "/bgudgaman.mp4"}
+    type="video/mp4"
+  />
+  Your browser does not support the video tag.
+</video>
         {/* Foreground Content */}
 
 
