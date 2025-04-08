@@ -3,7 +3,7 @@ import Image from "next/image";
 import ImageBox from "./components/box";
 import ImageBoxEv from "./components/eventbox"
 import Card from "./components/Card";
-import { useRef } from "react";
+import { useRef, useState,useEffect} from "react";
 import Faq from "./components/faq";
 import Link from "next/link";
 export default function Home() {
@@ -146,20 +146,42 @@ export default function Home() {
         Director, Uttaranchal Institute of Technology`;
 
   const eventref = useRef();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Check if the screen width is less than 768px (mobile breakpoint)
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Initial check
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <>
       {/* Background Video Section */}
         {/* Background Video */}
         <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          style={{ objectFit: "contain" }}
-        >
-          <source src="/bgudgaman.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        autoPlay
+        loop
+        muted
+        playsInline
+        style={{ objectFit: "contain" }}
+      >
+        <source
+          src={isMobile ? "/udgamanmobile.mp4" : "/bgudgaman.mp4"}
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
 
         {/* Foreground Content */}
 
