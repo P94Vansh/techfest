@@ -32,7 +32,7 @@ const footer = () => {
         </div>
         <div className="md:flex-row mt-2 flex flex-col md:gap-3 justify-center items-center">
           <div className="text-white text-center text-lg  flex flex-col lg:flex-row ">
-          Vansh Gambhir <div className="px-3 cursor-pointer" onClick={()=>window.location.href="tel:+919193373770"}>- 8979402739 - </div>
+          Vansh Gambhir <div className="px-3 cursor-pointer" onClick={()=>window.location.href="tel:+918979402739"}>- 8979402739 - </div>
           </div>
         </div>
 
