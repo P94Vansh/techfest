@@ -101,7 +101,6 @@ export default function Page({ params }) {
       [
         "Only mobile devices (Android/iOS), wired/wireless headphones, chargers, and pillows are permitted.",
       ],
-      ["Materials", "Participants must bring their own painting materials"],
       [
         "Disqualification: Cheating, bug exploitation, ringers, or toxic behaviour will result in immediate disqualification.",
       ],
