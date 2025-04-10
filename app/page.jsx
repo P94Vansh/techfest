@@ -6,7 +6,9 @@ import Card from "./components/Card";
 import { useRef, useState,useEffect} from "react";
 import Faq from "./components/faq";
 import Link from "next/link";
+import { IoClose } from "react-icons/io5";
 export default function Home() {
+  const [open,setOpen]=useState(false);
   const gamingContent = [
     { title: "Vijay Ghosh", src: "BGMI.png", href: "/event/vijayghosh" },
   ]
@@ -169,6 +171,24 @@ export default function Home() {
     <>
       {/* Background Video Section */}
         {/* Background Video */}
+        {!open && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="relative bg-white p-5 rounded-lg shadow-lg w-[80%] max-w-md">
+            <IoClose
+              className="hover:cursor-pointer absolute top-2 right-2 text-3xl text-red-700 font-bold"
+              onClick={() => setOpen(true)}
+            />
+            <div className="flex items-center justify-center">
+              <img
+                src="popup.gif"
+                alt="Popup"
+                className="object-contain h-full w-full p-3"
+              />
+            </div>
+          </div>
+        </div>
+      )}
+<div className={`${!open ? "blur-sm" : ""} transition-all duration-300`}>
         <video
   key={isMobile ? "mobile" : "desktop"} // Force re-render when isMobile changes
   autoPlay
@@ -254,8 +274,8 @@ export default function Home() {
           <h1 className="font-bold text-3xl text-center">Patron </h1>
           <div className="flex md:flex-row flex-col justify-center items-center">
             <ImageBox src="/faculity-3.jpg" name="Prof. Dharam Buddhi" pos="Vice Chancellor,UU" />
-            <ImageBox src="/homebg.png" name="Prof. Rajesh Bahuguna" pos="Pro Vice Chancellor,UU" />
-            <ImageBox src="/directorr.png" name="Dr. Abhishek Joshi" pos="Executive Director,UU" />
+            <ImageBox src="/homebg.jpg" name="Prof. Rajesh Bahuguna" pos="Pro Vice Chancellor,UU" />
+            <ImageBox src="/directorr.jpg" name="Dr. Abhishek Joshi" pos="Executive Director,UU" />
           </div>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center">
@@ -450,6 +470,13 @@ export default function Home() {
                 LinkedIn
               </Link>{" "}
               for updates.
+              <Link
+                target="_blank"
+                className="font-semibold font-mono text-blue-900 rounded-tr rounded-tl border-b-blue-950 border border-transparent hover:bg-[rgba(255,255,255,0.6)] transition-all "
+                href={"https://drive.google.com/drive/folders/1FQyp6e0vYgmQncZ_dI-xSemF5XIMDHnu"}
+              > Brouchure
+              </Link>{" "}
+              for our Event
             </div>
           </div>
           <div>
@@ -461,6 +488,7 @@ export default function Home() {
             />
           </div>
         </div>
+      </div>
       </div>
     </>
   );

@@ -12,8 +12,13 @@ const montserrat = Montserrat({
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Tech Fest 2025",
-  description:"Celebrate Tech Fest at MAHOTSAVA 2025! Join us for two days of exciting events, competitions, and fun. Unleash your inner genius with activities. Don't miss out on the ultimate celebration! Register now and be part of the excitement!"
+  title: "Udgaman 2025 - Tech Fest at Uttaranchal University",
+  description: "Join Udgaman 2025, the premier tech fest at Uttaranchal University, Dehradun. Experience two days of thrilling events, innovative competitions, and unforgettable fun. Showcase your talent, connect with bright minds, and be part of the ultimate celebration of technology and creativity. Register now to secure your spot!",
+  keywords: "Udgaman 2025, Tech Fest, Uttaranchal University, Dehradun, Engineering Events, Competitions, Innovation, Technology, Fun, Registration",
+  author: "Uttaranchal University",
+  robots: "index, follow",
+  viewport: "width=device-width, initial-scale=1.0",
+  canonical: "https://udgaman.uudoon.in/", // Replace with your actual website URL
 };
 
 export default function RootLayout({ children }) {
