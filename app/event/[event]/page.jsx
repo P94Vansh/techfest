@@ -88,7 +88,7 @@ export default function Page({ params }) {
     `Dronovation is a drone-based competition designed to test participants' piloting skills, drone maneuverability, and technical innovation. Participants will navigate their drones through a designated course, performing specific tasks such as object retrieval, precision landing, and obstacle avoidance. The event focuses on accuracy, control, and efficiency in drone operations.`,
     `Nanosat Pratiyogita is an aerospace engineering competition where participants design, develop, and present a conceptual model of a nanosatellite. The event encourages innovation in miniaturized satellite technology for scientific research, communication, and space exploration. Participants will be judged on technical feasibility, innovation, and presentation skills.`,
     //ece
-    `Mech Wars is a high-energy robotic combat event where participants design and build mechanical robots (Mech-Bots) equipped with weapons to compete in intense battles. The goal is to disable, or outlast the opponent’s robot in an arena setting. Teams must demonstrate innovation in design, technical skill in control, and strategic thinking during combat.`,
+    `Mech War is a high-energy robotic combat event where participants design and build mechanical robots (Mech-Bots) equipped with weapons to compete in intense battles. The goal is to disable, or outlast the opponent’s robot in an arena setting. Teams must demonstrate innovation in design, technical skill in control, and strategic thinking during combat.`,
     //phy
     `Organized by the Physics Department, this event showcases innovative working and non-working models that highlight the role of science in everyday life. Participants will demonstrate scientific concepts and their practical applications, making science more accessible and engaging for all.`,
   ];
@@ -264,9 +264,6 @@ export default function Page({ params }) {
       ["Eligibility", " Open to students from any discipline."],
       ["Scoring Criteria: Emphasis on good design and easy navigation."],
       ["Conduct", "Follow safety rules; no cheating"],
-      [
-        "Conduct: The judges' decisions are final, and no disputes will be entertained.",
-      ],
       [
         "Conduct: The judges' decisions are final, and no disputes will be entertained.",
       ],
@@ -594,7 +591,7 @@ export default function Page({ params }) {
     [
       "Accuracy (50%) – How well the design matches the provided specifications and dimensions.",
       "Presentation (30%) – Quality of exported views and clarity of technical drawings.",
-      "Presentation (30%) – Quality of exported views and clarity of technical drawings.",
+      "Efficiency (20%) – Effective use of modeling tools and techniques.",
     ],
     //civil
     [
