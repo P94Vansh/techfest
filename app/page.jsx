@@ -474,7 +474,7 @@ export default function Home() {
                 target="_blank"
                 className="font-semibold font-mono text-blue-900 rounded-tr rounded-tl border-b-blue-950 border border-transparent hover:bg-[rgba(255,255,255,0.6)] transition-all "
                 href={"https://drive.google.com/drive/folders/1FQyp6e0vYgmQncZ_dI-xSemF5XIMDHnu"}
-              > Brouchure
+              > Brochure
               </Link>{" "}
               for our Event
             </div>

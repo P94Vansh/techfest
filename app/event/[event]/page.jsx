@@ -176,7 +176,7 @@ export default function Page({ params }) {
         "Rounds: Two rounds – participants must qualify in the first round to proceed to the second.",
       ],
       [
-        "focus Areas:o	Technical Interviews (CS/IT – DSA, OS, DBMS, etc.),Non-Technical Interviews (HR, Aptitude, Communication),Domain-Specific (ML, Web Development, Cybersecurity, etc.)",
+        "focus Areas:	Technical Interviews (CS/IT – DSA, OS, DBMS, etc.),Non-Technical Interviews (HR, Aptitude, Communication),Domain-Specific (ML, Web Development, Cybersecurity, etc.)",
       ],
       ["Dress Code:Formal attire is recommended."],
       [
@@ -194,7 +194,7 @@ export default function Page({ params }) {
         "Presentation: Each participant gets 2-3 minutes to present their poster to judges.",
       ],
       [
-        "Plagiarism, AI-generated designs, or inappropriate content will result in disqualification.",
+        "Plagiarism: AI-generated designs, or inappropriate content will result in disqualification.",
       ],
       ["Participants must report 30 minutes before the event."],
       [
