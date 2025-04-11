@@ -247,7 +247,7 @@ export default function Page({ params }) {
       ["Visualizations must be created using Python language or jupiter Notebook"]
     ],
     [
-      ["Open to all B.Tech students."],
+      ["Open to all B.Tech and BCA students."],
       ["Teams of 2-4 members (all from the same institution)."],
       ["No participant can be part of multiple teams."],
       ["The quizmaster’s decision is final."],
