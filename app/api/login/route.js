@@ -4,6 +4,7 @@ import { NextResponse } from 'next/server';
 // import {secrets} from "../../../lib/hlpr"
 
 export async function POST(request) {
+  return;
   // Define the correct admin password
   const ADMIN_PASSWORD = process.env.ADMIN_KEY || 'admin-key'//secrets['ADMIN_KEY'];
 

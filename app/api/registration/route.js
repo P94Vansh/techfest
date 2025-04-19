@@ -17,7 +17,7 @@ import {
 
 // Handler function for different HTTP methods
 export async function POST(req) {
-
+  return;
   const pool = await getPool();
   const {
     // branch,
@@ -132,6 +132,7 @@ export async function POST(req) {
 }
 
 export async function GET(req) {
+  return;
   console.log("Loaded ADMIN_KEY:",process.env.ADMIN_KEY);
   const adminCookie = req.cookies.get("admin")?.value;
   console.log("adminCookie",adminCookie);

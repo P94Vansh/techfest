@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import {ErrorResponse, getPool, SuccessResponse, updateVerified} from "../../../lib/db"
 
 export async function POST(req) {
+  return;
   const pool = await getPool();
   const adminCookie = req.cookies.get("admin")?.value;
   if (!adminCookie || adminCookie !== (process.env.ADMIN_KEY || "admin-key"))

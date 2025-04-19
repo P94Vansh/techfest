@@ -845,17 +845,42 @@ export default function Page({ params }) {
     ["SCILIFE", "Model Presentation on Science in Everyday Life"],
   ];
   return (
-    <Eventspage
-      title={title[index]}
-      descriptions={descriptions[index]}
-      eventguid={eventguid[index]}
-      judCriteria={judCriteria[index]}
-      facultyCod={facultyCod[index]}
-      studentCod={studentCod[index]}
-      date={date[index]}
-      time={time[index]}
-      venue={venue[index]}
-      problemStatement={problemStatement}
-    />
+    <div className="min-h-screen bg-gradient-to-r from-blue-50 via-white to-blue-50 flex items-center justify-center px-6">
+      <div className="bg-white rounded-3xl shadow-2xl p-10 max-w-md w-full text-center border border-blue-100">
+        <div className="mb-6">
+          <svg
+            className="mx-auto h-16 w-16 text-red-500"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+        </div>
+        <h1 className="text-3xl font-bold text-gray-800 mb-4">Event Postponed</h1>
+        <p className="text-gray-600 text-lg mb-6">
+          We regret to inform you that the event has been postponed.
+          <br />
+          Please stay tuned for further updates.
+        </p>
+      </div>
+    </div>
+    // <Eventspage
+    //   title={title[index]}
+    //   descriptions={descriptions[index]}
+    //   eventguid={eventguid[index]}
+    //   judCriteria={judCriteria[index]}
+    //   facultyCod={facultyCod[index]}
+    //   studentCod={studentCod[index]}
+    //   date={date[index]}
+    //   time={time[index]}
+    //   venue={venue[index]}
+    //   problemStatement={problemStatement}
+    // />
   );
 }

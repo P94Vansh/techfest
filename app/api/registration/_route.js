@@ -3,6 +3,7 @@ import {getPool} from '../../../lib/db';
 
 // Handler function for different HTTP methods
 export async function POST(req) {
+  return;
   const pool = await getPool();
   const { EmailAddress, UniversityRollNo, FirstName, LastName, Branch, Department, Year, PhoneNumber, SelectedEvents } = await req.json();
 
@@ -19,6 +20,7 @@ export async function POST(req) {
 }
 
 export async function GET(req) {
+  return;
   const { searchParams } = new URL(req.url);
   const searchMap = {};
   for(let [key, value] of searchParams.entries()){
@@ -42,6 +44,7 @@ export async function GET(req) {
 }
 
 export async function DELETE(req) {
+  return;
   const pool = await getPool();
   const { EmailAddress } = await req.json();
 
